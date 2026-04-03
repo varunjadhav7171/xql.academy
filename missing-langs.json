@@ -1,0 +1,1542 @@
+{
+  "it": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "pt": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "ar": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "mr": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "ta": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "te": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "bn": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "id": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "tr": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "nl": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  },
+  "pl": {
+    "kids": [
+      {
+        "title": "ABC & Words",
+        "desc": "Learn alphabets, phonics and basic vocabulary"
+      },
+      {
+        "title": "Numbers & Math",
+        "desc": "Count, add and subtract with fun visual games"
+      },
+      {
+        "title": "World Around Us",
+        "desc": "Animals, nature, planets and amazing science facts"
+      },
+      {
+        "title": "Art & Creativity",
+        "desc": "Colors, shapes, drawing and creative expression"
+      },
+      {
+        "title": "Story Time",
+        "desc": "Interactive stories that build reading and imagination"
+      },
+      {
+        "title": "Speak & Learn",
+        "desc": "Pronounce words and build confidence speaking"
+      },
+      {
+        "title": "Puzzles & Logic",
+        "desc": "Brain teasers that sharpen thinking and problem solving"
+      },
+      {
+        "title": "Rhymes & Songs",
+        "desc": "Learn through music, rhythm and memory songs"
+      }
+    ],
+    "students": [
+      {
+        "title": "Mathematics",
+        "desc": "Algebra, geometry, trigonometry and calculus",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Science",
+        "desc": "Physics, chemistry and biology made visual",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "English",
+        "desc": "Grammar, comprehension, writing and literature",
+        "badge": "Class 1-12"
+      },
+      {
+        "title": "Social Studies",
+        "desc": "History, geography, civics and economics",
+        "badge": "Class 6-10"
+      },
+      {
+        "title": "Computer Sci.",
+        "desc": "Programming basics, MS Office and digital skills",
+        "badge": "Class 6-12"
+      },
+      {
+        "title": "Lab Practicals",
+        "desc": "Virtual experiments with step-by-step guidance",
+        "badge": "Class 9-12"
+      },
+      {
+        "title": "Essay Writing",
+        "desc": "Structure, vocabulary and writing skills for exams",
+        "badge": "Class 8-12"
+      },
+      {
+        "title": "Languages",
+        "desc": "Hindi, Sanskrit, French and regional languages",
+        "badge": "Class 1-12"
+      }
+    ],
+    "exams": [
+      {
+        "title": "UPSC / IAS",
+        "desc": "Prelims, Mains and Interview prep with current affairs",
+        "tag": "Civil Services"
+      },
+      {
+        "title": "MPSC",
+        "desc": "Maharashtra state services complete preparation",
+        "tag": "State Services"
+      },
+      {
+        "title": "NEET",
+        "desc": "Biology, Physics and Chemistry for medical entrance",
+        "tag": "Medical"
+      },
+      {
+        "title": "JEE",
+        "desc": "Maths, Physics and Chemistry for IIT/NIT entrance",
+        "tag": "Engineering"
+      },
+      {
+        "title": "MBBS Prep",
+        "desc": "Foundation and clinical knowledge for medical students",
+        "tag": "Medical"
+      },
+      {
+        "title": "Engineering",
+        "desc": "Core engineering subjects - CSE, ECE, Mechanical, Civil",
+        "tag": "B.Tech / B.E."
+      },
+      {
+        "title": "CLAT / Law",
+        "desc": "Legal reasoning, GK and English for law entrance",
+        "tag": "Law"
+      },
+      {
+        "title": "CAT / MBA",
+        "desc": "Quant, verbal and DILR for top B-school admissions",
+        "tag": "Management"
+      },
+      {
+        "title": "Banking / IBPS",
+        "desc": "Reasoning, maths and English for bank exams",
+        "tag": "Banking"
+      },
+      {
+        "title": "NDA / Defence",
+        "desc": "Maths, GK and SSB prep for armed forces",
+        "tag": "Defence"
+      },
+      {
+        "title": "GATE",
+        "desc": "Advanced engineering and science for PSU / M.Tech",
+        "tag": "Postgrad"
+      },
+      {
+        "title": "CA / CMA",
+        "desc": "Accounts, taxation and finance professional courses",
+        "tag": "Finance"
+      }
+    ]
+  }
+}
