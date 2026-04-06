@@ -1,7 +1,8 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { dictionaries, Language } from "../locales/dictionaries";
+import { dictionaries } from "../locales/dictionaries";
+import { Language } from "../locales/config";
 
 type LanguageContextType = {
   language: Language | null;
@@ -17,10 +18,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    // We no longer load the saved language on refresh
-    // This ensures the selection modal shows up EVERY time the page is reloaded
-    
-    // Mark hydration as complete so UI can render
+    const savedLang = window.localStorage.getItem("preferred_lang_v2") as Language | null;
+    if (savedLang && Object.keys(dictionaries).includes(savedLang)) {
+      setLanguageState(savedLang);
+    }
     setIsReady(true);
   }, []);
 
@@ -29,8 +30,20 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguageState(lang);
   };
 
-  // Provide the dictionary for the selected language, fallback to English if null
-  const t = language ? dictionaries[language] : dictionaries.en;
+  const mergeDeep = (base: any, override: any) => {
+    if (Array.isArray(base) || Array.isArray(override)) {
+      return override !== undefined ? override : base;
+    }
+    if (base && typeof base === "object" && override && typeof override === "object") {
+      return Object.keys({ ...base, ...override }).reduce((result, key) => {
+        result[key] = mergeDeep(base[key], override[key]);
+        return result;
+      }, {} as any);
+    }
+    return override !== undefined ? override : base;
+  };
+
+  const t = language ? mergeDeep(dictionaries.en, dictionaries[language]) : dictionaries.en;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t, isReady }}>

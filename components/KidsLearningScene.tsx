@@ -1,6 +1,10 @@
+"use client";
+
 import { memo } from "react";
+import { useLanguage } from "../app/contexts/LanguageContext";
 
 function KidsLearningScene() {
+  const { t } = useLanguage();
   return (
     <svg
       className="kids-scene"
@@ -103,7 +107,7 @@ function KidsLearningScene() {
           strokeWidth="4"
         />
         <text x="464" y="359" textAnchor="middle" fontSize="28" fontWeight="800" fill="#53B8FF" fontFamily="'Baloo 2', sans-serif">
-          Hi
+          {t.scene.hi}
         </text>
       </g>
 

@@ -1,6 +1,10 @@
+"use client";
+
 import { memo } from "react";
+import { useLanguage } from "../app/contexts/LanguageContext";
 
 function CompetitiveExamsScene() {
+  const { t } = useLanguage();
   return (
     <svg
       className="exam-scene"
@@ -104,7 +108,7 @@ function CompetitiveExamsScene() {
             fill="#B85A00"
             fontFamily="'Baloo 2', sans-serif"
           >
-            AIR
+            {t.scene.air}
           </text>
         </g>
       </g>
@@ -203,7 +207,7 @@ function CompetitiveExamsScene() {
           fill="#B85A00"
           fontFamily="'Baloo 2', sans-serif"
         >
-          SCORE
+          {t.scene.score}
         </text>
       </g>
 
@@ -230,7 +234,7 @@ function CompetitiveExamsScene() {
           fill="#B85A00"
           fontFamily="'Baloo 2', sans-serif"
         >
-          Mock Clear
+          {t.scene.mockClear}
         </text>
       </g>
     </svg>

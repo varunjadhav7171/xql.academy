@@ -1,6 +1,10 @@
+"use client";
+
 import { memo } from "react";
+import { useLanguage } from "../app/contexts/LanguageContext";
 
 function StudentsLearningScene() {
+  const { t } = useLanguage();
   return (
     <svg
       className="students-scene"
@@ -39,7 +43,7 @@ function StudentsLearningScene() {
         <rect x="118" y="172" width="48" height="10" rx="5" fill="#FFE7A0" />
         <rect x="118" y="190" width="56" height="10" rx="5" fill="#FFE7A0" />
         <text x="150" y="151" textAnchor="middle" fontSize="18" fontWeight="800" fill="#B06C00" fontFamily="'Baloo 2', sans-serif">
-          REV
+          {t.scene.revision}
         </text>
       </g>
 
@@ -79,7 +83,7 @@ function StudentsLearningScene() {
           strokeWidth="4"
         />
         <text x="125" y="342" textAnchor="middle" fontSize="30" fontWeight="800" fill="#0F7CC4" fontFamily="'Baloo 2', sans-serif">
-          A+
+          {t.scene.grade}
         </text>
       </g>
 

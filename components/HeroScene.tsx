@@ -1,8 +1,10 @@
 "use client";
 
 import { memo } from "react";
+import { useLanguage } from "../app/contexts/LanguageContext";
 
 function HeroScene() {
+  const { t } = useLanguage();
   return (
     <div className="hero-scene-wrap">
       <svg viewBox="0 0 420 480" xmlns="http://www.w3.org/2000/svg" className="hero-scene-svg">
@@ -68,15 +70,15 @@ function HeroScene() {
         <g className="hero-float-badge" style={{transformOrigin:"340px 110px"}} filter="url(#cardDrop)">
           <rect x="298" y="86" width="100" height="50" rx="16" fill="url(#xpG)"/>
           <rect x="298" y="86" width="100" height="25" rx="16" fill="rgba(255,255,255,0.15)"/>
-          <text x="348" y="107" textAnchor="middle" fontSize="10" fontWeight="800" fill="rgba(255,255,255,0.9)" fontFamily="'Baloo 2',Arial,sans-serif">TODAY</text>
+          <text x="348" y="107" textAnchor="middle" fontSize="10" fontWeight="800" fill="rgba(255,255,255,0.9)" fontFamily="'Baloo 2',Arial,sans-serif">{t.scene.today}</text>
           <text x="348" y="127" textAnchor="middle" fontSize="16" fontWeight="900" fill="white" fontFamily="'Baloo 2',Arial,sans-serif">+128 XP</text>
         </g>
 
         {/* ── Streak Badge (top-left floating) ── */}
         <g className="hero-float-badge2" style={{transformOrigin:"80px 110px"}} filter="url(#cardDrop)">
           <rect x="28" y="86" width="110" height="50" rx="16" fill="#fff" stroke="#e2f5cb" strokeWidth="2"/>
-          <text x="83" y="107" textAnchor="middle" fontSize="10" fontWeight="800" fill="#617256" fontFamily="'Baloo 2',Arial,sans-serif">STREAK</text>
-          <text x="83" y="127" textAnchor="middle" fontSize="15" fontWeight="900" fill="#163300" fontFamily="'Baloo 2',Arial,sans-serif">🔥 6 Days</text>
+          <text x="83" y="107" textAnchor="middle" fontSize="10" fontWeight="800" fill="#617256" fontFamily="'Baloo 2',Arial,sans-serif">{t.scene.streak}</text>
+          <text x="83" y="127" textAnchor="middle" fontSize="15" fontWeight="900" fill="#163300" fontFamily="'Baloo 2',Arial,sans-serif">🔥 6 {t.scene.days}</text>
         </g>
 
         {/* ── Coin (right side floating) ── */}

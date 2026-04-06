@@ -1,240 +1,22 @@
 "use client";
 
-import Image from "next/image";
+import { useLanguage } from "./contexts/LanguageContext";
 import HeroScene from "@/components/HeroScene";
 import CompetitiveExamsScene from "@/components/CompetitiveExamsScene";
 import KidsLearningScene from "@/components/KidsLearningScene";
 import NavBar from "@/components/NavBar";
 import StudentsLearningScene from "@/components/StudentsLearningScene";
+import LanguageModal from "@/components/LanguageModal";
 
-const kidsTopics = [
-  {
-    icon: "🔤",
-    title: "ABC & Words",
-    desc: "Learn alphabets, phonics and basic vocabulary",
-    color: "#FFF8E0",
-    border: "#FFE498",
-  },
-  {
-    icon: "🔢",
-    title: "Numbers & Math",
-    desc: "Count, add and subtract with fun visual games",
-    color: "#E8F7FF",
-    border: "#C9EBFF",
-  },
-  {
-    icon: "🌍",
-    title: "World Around Us",
-    desc: "Animals, nature, planets and amazing science facts",
-    color: "#EFFFE0",
-    border: "#C8F09A",
-  },
-  {
-    icon: "🎨",
-    title: "Art & Creativity",
-    desc: "Colors, shapes, drawing and creative expression",
-    color: "#FFF1F7",
-    border: "#FFD0E2",
-  },
-  {
-    icon: "📖",
-    title: "Story Time",
-    desc: "Interactive stories that build reading and imagination",
-    color: "#FFF8E0",
-    border: "#FFE498",
-  },
-  {
-    icon: "🗣️",
-    title: "Speak & Learn",
-    desc: "Pronounce words and build confidence speaking",
-    color: "#E8F7FF",
-    border: "#C9EBFF",
-  },
-  {
-    icon: "🧩",
-    title: "Puzzles & Logic",
-    desc: "Brain teasers that sharpen thinking and problem solving",
-    color: "#EFFFE0",
-    border: "#C8F09A",
-  },
-  {
-    icon: "🎵",
-    title: "Rhymes & Songs",
-    desc: "Learn through music, rhythm and memory songs",
-    color: "#FFF1F7",
-    border: "#FFD0E2",
-  },
-];
 
-const studentsTopics = [
-  {
-    icon: "📐",
-    title: "Mathematics",
-    desc: "Algebra, geometry, trigonometry and calculus",
-    color: "#FFF8E0",
-    border: "#FFE498",
-    badge: "Class 6-12",
-  },
-  {
-    icon: "🔬",
-    title: "Science",
-    desc: "Physics, chemistry and biology made visual",
-    color: "#E8F7FF",
-    border: "#C9EBFF",
-    badge: "Class 6-12",
-  },
-  {
-    icon: "📚",
-    title: "English",
-    desc: "Grammar, comprehension, writing and literature",
-    color: "#EFFFE0",
-    border: "#C8F09A",
-    badge: "Class 1-12",
-  },
-  {
-    icon: "🗺️",
-    title: "Social Studies",
-    desc: "History, geography, civics and economics",
-    color: "#FFF1F7",
-    border: "#FFD0E2",
-    badge: "Class 6-10",
-  },
-  {
-    icon: "💻",
-    title: "Computer Sci.",
-    desc: "Programming basics, MS Office and digital skills",
-    color: "#EFFFE0",
-    border: "#C8F09A",
-    badge: "Class 6-12",
-  },
-  {
-    icon: "🧪",
-    title: "Lab Practicals",
-    desc: "Virtual experiments with step-by-step guidance",
-    color: "#E8F7FF",
-    border: "#C9EBFF",
-    badge: "Class 9-12",
-  },
-  {
-    icon: "📝",
-    title: "Essay Writing",
-    desc: "Structure, vocabulary and writing skills for exams",
-    color: "#FFF8E0",
-    border: "#FFE498",
-    badge: "Class 8-12",
-  },
-  {
-    icon: "🌐",
-    title: "Languages",
-    desc: "Hindi, Sanskrit, French and regional languages",
-    color: "#FFF1F7",
-    border: "#FFD0E2",
-    badge: "Class 1-12",
-  },
-];
 
-const examTracks = [
-  {
-    icon: "🏛️",
-    title: "UPSC / IAS",
-    desc: "Prelims, Mains and Interview prep with current affairs",
-    color: "#FFF8E0",
-    border: "#FFE498",
-    tag: "Civil Services",
-  },
-  {
-    icon: "📜",
-    title: "MPSC",
-    desc: "Maharashtra state services complete preparation",
-    color: "#E8F7FF",
-    border: "#C9EBFF",
-    tag: "State Services",
-  },
-  {
-    icon: "💊",
-    title: "NEET",
-    desc: "Biology, Physics and Chemistry for medical entrance",
-    color: "#FFF1F7",
-    border: "#FFD0E2",
-    tag: "Medical",
-  },
-  {
-    icon: "⚙️",
-    title: "JEE",
-    desc: "Maths, Physics and Chemistry for IIT/NIT entrance",
-    color: "#EFFFE0",
-    border: "#C8F09A",
-    tag: "Engineering",
-  },
-  {
-    icon: "🏥",
-    title: "MBBS Prep",
-    desc: "Foundation and clinical knowledge for medical students",
-    color: "#FFF1F7",
-    border: "#FFD0E2",
-    tag: "Medical",
-  },
-  {
-    icon: "🔧",
-    title: "Engineering",
-    desc: "Core engineering subjects - CSE, ECE, Mechanical, Civil",
-    color: "#EFFFE0",
-    border: "#C8F09A",
-    tag: "B.Tech / B.E.",
-  },
-  {
-    icon: "⚖️",
-    title: "CLAT / Law",
-    desc: "Legal reasoning, GK and English for law entrance",
-    color: "#FFF8E0",
-    border: "#FFE498",
-    tag: "Law",
-  },
-  {
-    icon: "💼",
-    title: "CAT / MBA",
-    desc: "Quant, verbal and DILR for top B-school admissions",
-    color: "#E8F7FF",
-    border: "#C9EBFF",
-    tag: "Management",
-  },
-  {
-    icon: "🏦",
-    title: "Banking / IBPS",
-    desc: "Reasoning, maths and English for bank exams",
-    color: "#FFF8E0",
-    border: "#FFE498",
-    tag: "Banking",
-  },
-  {
-    icon: "🛡️",
-    title: "NDA / Defence",
-    desc: "Maths, GK and SSB prep for armed forces",
-    color: "#EFFFE0",
-    border: "#C8F09A",
-    tag: "Defence",
-  },
-  {
-    icon: "🧬",
-    title: "GATE",
-    desc: "Advanced engineering and science for PSU / M.Tech",
-    color: "#E8F7FF",
-    border: "#C9EBFF",
-    tag: "Postgrad",
-  },
-  {
-    icon: "📊",
-    title: "CA / CMA",
-    desc: "Accounts, taxation and finance professional courses",
-    color: "#FFF1F7",
-    border: "#FFD0E2",
-    tag: "Finance",
-  },
-];
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="page-shell page-shell-home" style={{ minHeight: "100vh" }}>
+      <LanguageModal />
       <NavBar />
 
       <div className="landing-hero">
@@ -249,61 +31,11 @@ export default function Home() {
               margin: 0,
             }}
           >
-            Learn anything.
+            {t.hero.title1}
             <br />
-            <span style={{ color: "#58cc02" }}>Level up daily.</span>
+            <span style={{ color: "#58cc02" }}>{t.hero.title2}</span>
           </h1>
 
-          <div>
-            <p
-              style={{
-                fontWeight: 800,
-                fontSize: "0.88rem",
-                color: "#617256",
-                marginBottom: "14px",
-                textTransform: "uppercase",
-                letterSpacing: "0.06em",
-              }}
-            >
-              I want to learn...
-            </p>
-            <div className="lang-grid">
-              {[
-                { code: "gb", name: "English" },
-                { code: "es", name: "Spanish" },
-                { code: "fr", name: "French" },
-                { code: "de", name: "German" },
-                { code: "jp", name: "Japanese" },
-                { code: "kr", name: "Korean" },
-                { code: "in", name: "Hindi" },
-                { code: "cn", name: "Chinese" },
-                { code: "it", name: "Italian" },
-                { code: "br", name: "Portuguese" },
-                { code: "ru", name: "Russian" },
-                { code: "sa", name: "Arabic" },
-                { code: "in", name: "Marathi" },
-                { code: "in", name: "Tamil" },
-                { code: "in", name: "Telugu" },
-                { code: "in", name: "Bengali" },
-                { code: "id", name: "Indonesian" },
-                { code: "tr", name: "Turkish" },
-                { code: "nl", name: "Dutch" },
-                { code: "pl", name: "Polish" },
-              ].map((lang) => (
-                <button key={lang.name} className="lang-btn">
-                  <Image
-                    src={`https://flagcdn.com/w40/${lang.code}.png`}
-                    alt={lang.name}
-                    width={30}
-                    height={20}
-                    className="lang-flag"
-                    loading="lazy"
-                  />
-                  <span>{lang.name}</span>
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -326,7 +58,7 @@ export default function Home() {
                   letterSpacing: "0.08em",
                 }}
               >
-                For Kids
+                {t.kids.tag}
               </span>
             </div>
 
@@ -341,7 +73,7 @@ export default function Home() {
                 maxWidth: "10ch",
               }}
             >
-              Learning that feels like play
+              {t.kids.title}
             </h2>
 
             <p
@@ -353,12 +85,11 @@ export default function Home() {
                 margin: 0,
               }}
             >
-              Fun, colorful lessons designed for young minds. Build habits early with streaks,
-              rewards, and bite-sized challenges.
+              {t.kids.desc}
             </p>
 
             <div className="kids-pill-row">
-              {["Daily streak stars", "Tiny challenge rounds", "Friendly voice practice"].map((item) => (
+              {[t.kids.pill1, t.kids.pill2, t.kids.pill3].map((item) => (
                 <span key={item} className="kids-pill">
                   {item}
                 </span>
@@ -366,7 +97,7 @@ export default function Home() {
             </div>
 
             <div className="kids-card-grid">
-              {kidsTopics.map((item) => (
+              {t.kidsTopics.map((item) => (
                 <div
                   key={item.title}
                   className="kids-card"
@@ -398,27 +129,25 @@ export default function Home() {
 
           <div className="kids-art-shell">
             <div className="kids-art-copy">
-              <span className="kids-art-tag">Playful progress</span>
-              <h3>Stories, sounds, rewards, and bright little wins in one happy space.</h3>
-              <p>
-                A dedicated kids view that feels safe, colorful, and exciting from the first tap.
-              </p>
+              <span className="kids-art-tag">{t.kids.badge}</span>
+              <h3>{t.kids.artTitle}</h3>
+              <p>{t.kids.artDesc}</p>
             </div>
 
             <KidsLearningScene />
 
             <div className="kids-stat-row">
               <div className="kids-stat">
-                <strong>5 min</strong>
-                <span>bite-size play sessions</span>
+                <strong>{t.kids.stat1Title}</strong>
+                <span>{t.kids.stat1Desc}</span>
               </div>
               <div className="kids-stat">
-                <strong>Daily</strong>
-                <span>streak stars and rewards</span>
+                <strong>{t.kids.stat2Title}</strong>
+                <span>{t.kids.stat2Desc}</span>
               </div>
               <div className="kids-stat">
-                <strong>Speak</strong>
-                <span>listen, repeat, and smile</span>
+                <strong>{t.kids.stat3Title}</strong>
+                <span>{t.kids.stat3Desc}</span>
               </div>
             </div>
           </div>
@@ -429,28 +158,25 @@ export default function Home() {
         <div className="students-showcase">
           <div className="students-art-shell">
             <div className="students-art-copy">
-              <span className="students-art-tag">Focused momentum</span>
-              <h3>Study spaces that feel active, modern, and built for visible progress.</h3>
-              <p>
-                A sharper student experience with smart visuals, revision energy, and animated
-                feedback that keeps learning moving.
-              </p>
+              <span className="students-art-tag">{t.students.badge}</span>
+              <h3>{t.students.artTitle}</h3>
+              <p>{t.students.artDesc}</p>
             </div>
 
             <StudentsLearningScene />
 
             <div className="students-stat-row">
               <div className="students-stat">
-                <strong>12</strong>
-                <span>subject tracks with guided practice</span>
+                <strong>{t.students.stat1Title}</strong>
+                <span>{t.students.stat1Desc}</span>
               </div>
               <div className="students-stat">
-                <strong>Quick</strong>
-                <span>revision loops before exams</span>
+                <strong>{t.students.stat2Title}</strong>
+                <span>{t.students.stat2Desc}</span>
               </div>
               <div className="students-stat">
-                <strong>Live</strong>
-                <span>progress bars, goals, and streaks</span>
+                <strong>{t.students.stat3Title}</strong>
+                <span>{t.students.stat3Desc}</span>
               </div>
             </div>
           </div>
@@ -468,7 +194,7 @@ export default function Home() {
                   letterSpacing: "0.08em",
                 }}
               >
-                For Students
+                {t.students.tag}
               </span>
             </div>
 
@@ -483,7 +209,7 @@ export default function Home() {
                 maxWidth: "11ch",
               }}
             >
-              Ace your school subjects
+              {t.students.title}
             </h2>
 
             <p
@@ -495,12 +221,11 @@ export default function Home() {
                 margin: 0,
               }}
             >
-              Structured lessons for Class 1-12. Master every subject with quizzes, explanations,
-              progress tracking, and revision flows that feel motivating instead of heavy.
+              {t.students.desc}
             </p>
 
             <div className="students-pill-row">
-              {["Exam-ready drills", "Animated progress", "Fast revision wins"].map((item) => (
+              {[t.students.pill1, t.students.pill2, t.students.pill3].map((item) => (
                 <span key={item} className="students-pill">
                   {item}
                 </span>
@@ -508,7 +233,7 @@ export default function Home() {
             </div>
 
             <div className="students-card-grid">
-              {studentsTopics.map((item) => (
+              {t.studentsTopics.map((item) => (
                 <div
                   key={item.title}
                   className="students-card"
@@ -559,7 +284,7 @@ export default function Home() {
                   letterSpacing: "0.08em",
                 }}
               >
-                Higher Level & Competitive Exams
+                {t.exams.tag}
               </span>
             </div>
 
@@ -574,7 +299,7 @@ export default function Home() {
                 maxWidth: "11ch",
               }}
             >
-              Crack the toughest exams
+              {t.exams.title}
             </h2>
 
             <p
@@ -586,15 +311,14 @@ export default function Home() {
                 margin: 0,
               }}
             >
-              Focused prep for India&apos;s most competitive exams with structured paths, mock
-              tests, revision cycles, and expert content that feels high-energy and goal driven.
+              {t.exams.desc}
             </p>
 
             <div className="exam-signal-row">
               {[
-                { value: "12 Tracks", label: "UPSC to CA paths" },
-                { value: "Timed Mocks", label: "real pressure practice" },
-                { value: "Rank Lifts", label: "clear performance feedback" },
+                { value: t.exams.stat1Title, label: t.exams.stat1Desc },
+                { value: t.exams.stat2Title, label: t.exams.stat2Desc },
+                { value: t.exams.stat3Title, label: t.exams.stat3Desc },
               ].map((item) => (
                 <div key={item.value} className="exam-signal">
                   <strong>{item.value}</strong>
@@ -604,7 +328,7 @@ export default function Home() {
             </div>
 
             <div className="exam-pill-row">
-              {["Mock test energy", "Rank-focused revision", "Serious prep, clear progress"].map((item) => (
+              {[t.exams.pill1, t.exams.pill2, t.exams.pill3].map((item) => (
                 <span key={item} className="exam-pill">
                   {item}
                 </span>
@@ -612,7 +336,7 @@ export default function Home() {
             </div>
 
             <div className="exam-card-grid">
-              {examTracks.map((item, index) => (
+              {t.examTracks.map((item) => (
                 <div
                   key={item.title}
                   className="exam-card"
@@ -649,33 +373,30 @@ export default function Home() {
 
           <div className="exam-art-shell">
             <div className="exam-art-copy">
-              <span className="exam-art-tag">Peak performance</span>
-              <h3>Mock tests, rank lifts, and milestone wins in a focused prep arena.</h3>
-              <p>
-                Designed to feel like a mission board for ambitious learners pushing toward big
-                targets.
-              </p>
+              <span className="exam-art-tag">{t.exams.tag}</span>
+              <h3>{t.exams.artTitle || t.exams.desc}</h3>
+              <p>{t.exams.artDesc || t.exams.desc}</p>
             </div>
 
             <div className="exam-scene-wrap">
-              <div className="exam-floating-chip exam-chip-rank">AIR 184</div>
-              <div className="exam-floating-chip exam-chip-target">98 %ile Target</div>
-              <div className="exam-floating-chip exam-chip-mock">Next Mock 07:30</div>
+              <div className="exam-floating-chip exam-chip-rank">{t.exams.floatingChips[0]}</div>
+              <div className="exam-floating-chip exam-chip-target">{t.exams.floatingChips[1]}</div>
+              <div className="exam-floating-chip exam-chip-mock">{t.exams.floatingChips[2]}</div>
               <CompetitiveExamsScene />
             </div>
 
             <div className="exam-stat-row">
               <div className="exam-stat">
-                <strong>All India</strong>
-                <span>leaderboards and score movement</span>
+                <strong>{t.exams.stat1Title}</strong>
+                <span>{t.exams.stat1Desc}</span>
               </div>
               <div className="exam-stat">
-                <strong>Timed</strong>
-                <span>mock tests and focused revision laps</span>
+                <strong>{t.exams.stat2Title}</strong>
+                <span>{t.exams.stat2Desc}</span>
               </div>
               <div className="exam-stat">
-                <strong>Smart</strong>
-                <span>priority drills for weak areas</span>
+                <strong>{t.exams.stat3Title}</strong>
+                <span>{t.exams.stat3Desc}</span>
               </div>
             </div>
           </div>

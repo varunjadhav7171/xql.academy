@@ -2,142 +2,842 @@ export const dictionaries = {
   en: {
     nav: { appName: "XQL Academy", tagline: "Learn · Streak · Win", login: "LOG IN", signup: "SIGN UP" },
     hero: { title1: "Learn anything.", title2: "Level up daily.", selectLanguage: "I want to learn..." },
-    kids: { tag: "For Kids", badge: "Playful progress", title: "Interactive world of topics", desc: "A mix of everything children love to explore...", artTitle: "Stories, sounds, rewards, and bright little wins in one happy space.", artDesc: "A dedicated kids view that feels safe, colorful, and exciting from the first tap.", stat1Title: "5 min", stat1Desc: "bite-size play sessions", stat2Title: "Daily", stat2Desc: "streak stars and rewards", stat3Title: "Speak", stat3Desc: "listen, repeat, and smile" },
+    kids: { tag: "For Kids", badge: "Playful progress", title: "Interactive world of topics", desc: "A mix of everything children love to explore...", artTitle: "Stories, sounds, rewards, and bright little wins in one happy space.", artDesc: "A dedicated kids view that feels safe, colorful, and exciting from the first tap.", stat1Title: "5 min", stat1Desc: "bite-size play sessions", stat2Title: "Daily", stat2Desc: "streak stars and rewards", stat3Title: "Speak", stat3Desc: "listen, repeat, and smile", pill1: "Fun Games", pill2: "Daily Streaks", pill3: "Story Mode" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC & Words", desc: "Learn alphabets, phonics and basic vocabulary", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Numbers & Math", desc: "Count, add and subtract with fun visual games", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "World Around Us", desc: "Animals, nature, planets and amazing science facts", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Art & Creativity", desc: "Colors, shapes, drawing and creative expression", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Story Time", desc: "Interactive stories that build reading and imagination", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🗣️", title: "Speak & Learn", desc: "Pronounce words and build confidence speaking", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Puzzles & Logic", desc: "Brain teasers that sharpen thinking and problem solving", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Rhymes & Songs", desc: "Learn through music, rhythm and memory songs", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "For Students", badge: "Focused momentum", artTitle: "Study spaces that feel active, modern, and built for visible progress.", artDesc: "A sharper student experience with smart visuals, revision energy, and animated feedback that keeps learning moving.", stat1Title: "12", stat1Desc: "subject tracks with guided practice", stat2Title: "Quick", stat2Desc: "revision loops before exams", stat3Title: "Live", stat3Desc: "progress bars, goals, and streaks", title: "Ace your school subjects", desc: "Structured lessons for Class 1-12. Master every subject with quizzes, explanations, progress tracking, and revision flows that feel motivating instead of heavy.", pill1: "Exam-ready drills", pill2: "Animated progress", pill3: "Fast revision wins" },
-    exams: { tag: "Higher Level & Competitive Exams", title: "Crack the toughest exams", desc: "Focused prep for India's most competitive exams with structured paths, mock tests, revision cycles, and expert content that feels high-energy and goal driven.", stat1Title: "12 Tracks", stat1Desc: "UPSC to CA paths", stat2Title: "Timed Mocks", stat2Desc: "real pressure practice", stat3Title: "Rank Lifts", stat3Desc: "clear performance feedback", pill1: "Daily Mock Tests", pill2: "Rank Prediction", pill3: "Syllabus Trackers" }
+    studentsTopics: [
+      { icon: "📐", title: "Mathematics", desc: "Algebra, geometry, trigonometry and calculus", badge: "Class 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Science", desc: "Physics, chemistry and biology made visual", badge: "Class 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "English", desc: "Grammar, comprehension, writing and literature", badge: "Class 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "Social Studies", desc: "History, geography, civics and economics", badge: "Class 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Computer Sci.", desc: "Programming basics, MS Office and digital skills", badge: "Class 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Lab Practicals", desc: "Virtual experiments with step-by-step guidance", badge: "Class 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Essay Writing", desc: "Structure, vocabulary and writing skills for exams", badge: "Class 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "Languages", desc: "Hindi, Sanskrit, French and regional languages", badge: "Class 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Prelims, Mains and Interview prep with current affairs", tag: "Civil Services", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Maharashtra state services complete preparation", tag: "State Services", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biology, Physics and Chemistry for medical entrance", tag: "Medical", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Maths, Physics and Chemistry for IIT/NIT entrance", tag: "Engineering", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS Prep", desc: "Foundation and clinical knowledge for medical students", tag: "Medical", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Engineering", desc: "Core engineering subjects - CSE, ECE, Mechanical, Civil", tag: "B.Tech / B.E.", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "⚖️", title: "CLAT / Law", desc: "Legal reasoning, GK and English for law entrance", tag: "Law", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "💼", title: "CAT / MBA", desc: "Quant, verbal and DILR for top B-school admissions", tag: "Management", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🏦", title: "Banking / IBPS", desc: "Reasoning, maths and English for bank exams", tag: "Banking", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🛡️", title: "NDA / Defence", desc: "Maths, GK and SSB prep for armed forces", tag: "Defence", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🧬", title: "GATE", desc: "Advanced engineering and science for PSU / M.Tech", tag: "Postgrad", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Accounts, taxation and finance professional courses", tag: "Finance", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    exams: { tag: "Higher Level & Competitive Exams", title: "Crack the toughest exams", desc: "Focused prep for India's most competitive exams with structured paths, mock tests, revision cycles, and expert content that feels high-energy and goal driven.", artTitle: "High-energy prep built for India's toughest exams and goal-driven learners.", artDesc: "Structured paths, timed mocks, and expert content that keeps you sharp and focused.", stat1Title: "12 Tracks", stat1Desc: "UPSC to CA paths", stat2Title: "Timed Mocks", stat2Desc: "real pressure practice", stat3Title: "Rank Lifts", stat3Desc: "clear performance feedback", pill1: "Daily Mock Tests", pill2: "Rank Prediction", pill3: "Syllabus Trackers", floatingChips: ["AIR 184", "98 %ile Target", "Next Mock 07:30"] },
+    scene: { today: "TODAY", streak: "STREAK", days: "Days", revision: "REV", grade: "A+", score: "SCORE", mockClear: "Mock Clear", hi: "Hi", air: "AIR" }
   },
   es: {
     nav: { appName: "Academia XQL", tagline: "Aprende · Racha · Gana", login: "INICIAR SESIÓN", signup: "REGISTRARSE" },
     hero: { title1: "Aprende cualquier cosa.", title2: "Sube de nivel a diario.", selectLanguage: "Quiero aprender..." },
     kids: { tag: "Para Niños", badge: "Progreso lúdico", title: "Mundo interactivo de temas", desc: "Una mezcla de todo lo que a los niños les encanta explorar...", artTitle: "Historias, sonidos, recompensas y pequeñas victorias en un lugar feliz.", artDesc: "Una vista dedicada a los niños que se siente segura y colorida.", stat1Title: "5 min", stat1Desc: "sesiones de juego breves", stat2Title: "Diario", stat2Desc: "estrellas de racha y premios", stat3Title: "Habla", stat3Desc: "escucha, repite y sonríe" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC y Palabras", desc: "Aprende alfabetos, fonética y vocabulario básico", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Números y Matemáticas", desc: "Cuenta, suma y resta con juegos visuales divertidos", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "El Mundo a Nuestro Alrededor", desc: "Animales, naturaleza, planetas y hechos científicos asombrosos", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Arte y Creatividad", desc: "Colores, formas, dibujo y expresión creativa", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Hora de Cuentos", desc: "Historias interactivas que construyen la lectura y la imaginación", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Habla y Aprende", desc: "Pronuncia palabras y construye confianza al hablar", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Rompecabezas y Lógica", desc: "Rompecabezas mentales que agudizan el pensamiento y la resolución de problemas", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Rimas y Canciones", desc: "Aprende a través de la música, el ritmo y las canciones de memoria", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "Para Estudiantes", badge: "Impulso centrado", artTitle: "Espacios de estudio activos y modernos.", artDesc: "Una experiencia más aguda con visuales inteligentes y retroalimentación animada.", stat1Title: "12", stat1Desc: "materias con práctica", stat2Title: "Rápido", stat2Desc: "bucles de revisión", stat3Title: "En vivo", stat3Desc: "barras de progreso y rachas", title: "Domina tus materias", desc: "Lecciones estructuradas para las Clases 1-12. Domina cada materia con cuestionarios.", pill1: "Ejercicios listos", pill2: "Progreso animado", pill3: "Revisiones rápidas" },
-    exams: { tag: "Exámenes Competitivos", title: "Supera los exámenes más difíciles", desc: "Preparación enfocada para exámenes competitivos con rutas estructuradas.", stat1Title: "12 Rutas", stat1Desc: "Múltiples caminos", stat2Title: "Simulacros", stat2Desc: "práctica bajo presión", stat3Title: "Rankings", stat3Desc: "retroalimentación clara", pill1: "Pruebas diarias", pill2: "Predicción de ranking", pill3: "Rastreadores" }
+    studentsTopics: [
+      { icon: "📐", title: "Matemáticas", desc: "Álgebra, geometría, trigonometría y cálculo", badge: "Clase 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Ciencia", desc: "Física, química y biología hechas visuales", badge: "Clase 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Inglés", desc: "Gramática, comprensión, escritura y literatura", badge: "Clase 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "Estudios Sociales", desc: "Historia, geografía, civismo y economía", badge: "Clase 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Ciencia de la Computación", desc: "Conceptos básicos de programación, MS Office y habilidades digitales", badge: "Clase 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Prácticas de Laboratorio", desc: "Experimentos virtuales con guía paso a paso", badge: "Clase 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Redacción de Ensayos", desc: "Estructura, vocabulario y habilidades de escritura para exámenes", badge: "Clase 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "Idiomas", desc: "Hindi, sánscrito, francés e idiomas regionales", badge: "Clase 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Preparación para Prelims, Mains y Entrevista con asuntos actuales", tag: "Servicios Civiles", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Preparación completa para servicios estatales de Maharashtra", tag: "Servicios Estatales", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biología, Física y Química para entrada médica", tag: "Médico", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Matemáticas, Física y Química para entrada IIT/NIT", tag: "Ingeniería", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "Preparación MBBS", desc: "Conocimiento básico y clínico para estudiantes de medicina", tag: "Médico", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Ingeniería", desc: "Materias básicas de ingeniería - CSE, ECE, Mecánica, Civil", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Derecho", desc: "Razonamiento legal, GK e inglés para entrada jurídica", tag: "Derecho", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Cuantitativo, verbal y DILR para admisiones en escuelas de negocios", tag: "Gestión", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "Banca / IBPS", desc: "Razonamiento, matemáticas e inglés para exámenes bancarios", tag: "Banca", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Defensa", desc: "Matemáticas, GK y preparación SSB para fuerzas armadas", tag: "Defensa", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Ingeniería avanzada y ciencia para PSU / M.Tech", tag: "Postgrado", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Cuentas, impuestos y cursos profesionales de finanzas", tag: "Finanzas", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "Exámenes Competitivos", title: "Supera los exámenes más difíciles", desc: "Preparación enfocada para exámenes competitivos con rutas estructuradas.", stat1Title: "12 Rutas", stat1Desc: "Múltiples caminos", stat2Title: "Simulacros", stat2Desc: "práctica bajo presión", stat3Title: "Rankings", stat3Desc: "retroalimentación clara", pill1: "Pruebas diarias", pill2: "Predicción de ranking", pill3: "Rastreadores", floatingChips: ["AIRE 184", "Objetivo 98 %ile", "Próximo Mock 07:30"] },
+    scene: { today: "HOY", streak: "RACHA", days: "Días", revision: "REV", grade: "A+", score: "PUNTOS", mockClear: "Simulacro OK", hi: "Hola", air: "AIRE" }
   },
   fr: {
     nav: { appName: "Académie XQL", tagline: "Apprendre · Série · Gagner", login: "CONNEXION", signup: "S'INSCRIRE" },
     hero: { title1: "Apprenez tout.", title2: "Progressez chaque jour.", selectLanguage: "Je veux apprendre..." },
     kids: { tag: "Pour les Enfants", badge: "Progrès ludique", title: "Monde interactif de sujets", desc: "Un mélange de tout ce que les enfants aiment...", artTitle: "Histoires, sons et récompenses dans un espace joyeux.", artDesc: "Une vue dédiée qui est sûre, colorée et passionnante.", stat1Title: "5 min", stat1Desc: "sessions de jeu courtes", stat2Title: "Quotidien", stat2Desc: "étoiles et récompenses", stat3Title: "Parle", stat3Desc: "écoute, répète et souris" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC et Mots", desc: "Apprenez les alphabets, la phonétique et le vocabulaire de base", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Nombres et Mathématiques", desc: "Comptez, additionnez et soustrayez avec des jeux visuels amusants", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "Le Monde Autour de Nous", desc: "Animaux, nature, planètes et faits scientifiques étonnants", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Art et Créativité", desc: "Couleurs, formes, dessin et expression créative", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Heure des Histoires", desc: "Histoires interactives qui développent la lecture et l'imagination", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Parle et Apprends", desc: "Prononce des mots et construis la confiance en parlant", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Casse-têtes et Logique", desc: "Casse-têtes mentaux qui aiguisent la pensée et la résolution de problèmes", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Rimes et Chansons", desc: "Apprenez à travers la musique, le rythme et les chansons de mémoire", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "Pour les Étudiants", badge: "Élan concentré", artTitle: "Des espaces d'étude actifs et modernes.", artDesc: "Une expérience plus fine avec des visuels intelligents.", stat1Title: "12", stat1Desc: "pistes de sujets", stat2Title: "Rapide", stat2Desc: "boucles de révision", stat3Title: "En Direct", stat3Desc: "barres de progression", title: "Maîtrisez vos matières", desc: "Leçons structurées pour les classes 1-12. Maîtrisez chaque sujet avec des quiz.", pill1: "Exercices d'examen", pill2: "Progrès animés", pill3: "Révisions rapides" },
-    exams: { tag: "Examens Compétitifs", title: "Réussissez les examens", desc: "Préparation ciblée pour des examens compétitifs avec des chemins structurés.", stat1Title: "12 Pistes", stat1Desc: "cheminements multiples", stat2Title: "Simulations", stat2Desc: "pratique sous pression", stat3Title: "Classements", stat3Desc: "retours de performance", pill1: "Tests quotidiens", pill2: "Prédiction de rang", pill3: "Suivis de programme" }
+    studentsTopics: [
+      { icon: "📐", title: "Mathématiques", desc: "Algèbre, géométrie, trigonométrie et calcul", badge: "Classe 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Sciences", desc: "Physique, chimie et biologie rendues visuelles", badge: "Classe 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Anglais", desc: "Grammaire, compréhension, écriture et littérature", badge: "Classe 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "Études Sociales", desc: "Histoire, géographie, civisme et économie", badge: "Classe 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Informatique", desc: "Concepts de base de programmation, MS Office et compétences numériques", badge: "Classe 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Travaux Pratiques", desc: "Expériences virtuelles avec un guide étape par étape", badge: "Classe 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Rédaction d'Essais", desc: "Structure, vocabulaire et compétences d'écriture pour les examens", badge: "Classe 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "Langues", desc: "Hindi, sanskrit, français et langues régionales", badge: "Classe 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Préparation Prelims, Mains et Entretien avec les affaires courantes", tag: "Services Civils", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Préparation complète des services d'État du Maharashtra", tag: "Services d'État", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biologie, Physique et Chimie pour l'entrée médicale", tag: "Médical", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Maths, Physique et Chimie pour l'entrée IIT/NIT", tag: "Ingénierie", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "Préparation MBBS", desc: "Connaissances de base et cliniques pour les étudiants en médecine", tag: "Médical", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Ingénierie", desc: "Sujets d'ingénierie de base - CSE, ECE, Mécanique, Civil", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Droit", desc: "Raisonnement juridique, GK et anglais pour l'entrée en droit", tag: "Droit", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Quantitatif, verbal et DILR pour les admissions dans les écoles de commerce", tag: "Gestion", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "Banque / IBPS", desc: "Raisonnement, maths et anglais pour les examens bancaires", tag: "Banque", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Défense", desc: "Maths, GK et préparation SSB pour les forces armées", tag: "Défense", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Ingénierie avancée et sciences pour PSU / M.Tech", tag: "Postgradué", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Comptes, fiscalité et cours professionnels de finance", tag: "Finance", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "Examens Compétitifs", title: "Réussissez les examens", desc: "Préparation ciblée pour des examens compétitifs avec des chemins structurés.", stat1Title: "12 Pistes", stat1Desc: "cheminements multiples", stat2Title: "Simulations", stat2Desc: "pratique sous pression", stat3Title: "Classements", stat3Desc: "retours de performance", pill1: "Tests quotidiens", pill2: "Prédiction de rang", pill3: "Suivis de programme", floatingChips: ["AIR 184", "Objectif 98 %ile", "Prochain Mock 07:30"] },
+    scene: { today: "AUJOURD'HUI", streak: "SÉRIE", days: "Jours", revision: "RÉV", grade: "A+", score: "SCORE", mockClear: "Simulation OK", hi: "Salut", air: "AIR" }
   },
   de: {
     nav: { appName: "XQL Akademie", tagline: "Lernen · Serie · Gewinnen", login: "ANMELDEN", signup: "REGISTRIEREN" },
     hero: { title1: "Lerne alles.", title2: "Steige täglich auf.", selectLanguage: "Ich möchte lernen..." },
     kids: { tag: "Für Kinder", badge: "Spielerischer Fortschritt", title: "Interaktive Themenwelt", desc: "Eine Mischung aus allem, was Kinder gerne entdecken...", artTitle: "Geschichten, Geräusche und Belohnungen an einem fröhlichen Ort.", artDesc: "Ein eigener Bereich, der sicher, bunt und spannend ist.", stat1Title: "5 Min", stat1Desc: "kurze Spielsitzungen", stat2Title: "Täglich", stat2Desc: "Stern-Serien und Belohnungen", stat3Title: "Sprechen", stat3Desc: "zuhören, wiederholen und lächeln" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC und Wörter", desc: "Lerne Alphabete, Phonetik und grundlegenden Wortschatz", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Zahlen und Mathematik", desc: "Zähle, addiere und subtrahiere mit lustigen visuellen Spielen", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "Die Welt um uns herum", desc: "Tiere, Natur, Planeten und erstaunliche wissenschaftliche Fakten", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Kunst und Kreativität", desc: "Farben, Formen, Zeichnen und kreativer Ausdruck", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Geschichtenstunde", desc: "Interaktive Geschichten, die Lesen und Vorstellungskraft aufbauen", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Sprechen und Lernen", desc: "Wörter aussprechen und Selbstvertrauen beim Sprechen aufbauen", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Rätsel und Logik", desc: "Gehirn-Jonglagen, die Denken und Problemlösung schärfen", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Reime und Lieder", desc: "Lerne durch Musik, Rhythmus und Gedächtnislieder", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "Für Studenten", badge: "Fokussierter Schwung", artTitle: "Lernräume, die sich aktiv und modern anfühlen.", artDesc: "Eine schärfere Lernerfahrung mit intelligenten Grafiken.", stat1Title: "12", stat1Desc: "Themenbereiche mit geführter Praxis", stat2Title: "Schnell", stat2Desc: "Wiederholungsschleifen", stat3Title: "Live", stat3Desc: "Fortschrittsbalken und Ziele", title: "Meistere deine Schulfächer", desc: "Strukturierte Lektionen für die Klassen 1-12. Meistere jedes Fach durch Quizze.", pill1: "Prüfungsübungen", pill2: "Animierter Fortschritt", pill3: "Schnelle Wiederholung" },
-    exams: { tag: "Leistungstests", title: "Knacke die härtesten Prüfungen", desc: "Fokussierte Vorbereitung auf wettbewerbsfähige Prüfungen mit strukturierten Wegen.", stat1Title: "12 Pfade", stat1Desc: "verschiedene Kurse", stat2Title: "Prüfungen", stat2Desc: "Üben unter Druck", stat3Title: "Ränge", stat3Desc: "klares Leistungsfeedback", pill1: "Tägliche Tests", pill2: "Rangvorhersage", pill3: "Lehrplantracker" }
+    studentsTopics: [
+      { icon: "📐", title: "Mathematik", desc: "Algebra, Geometrie, Trigonometrie und Analysis", badge: "Klasse 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Wissenschaften", desc: "Physik, Chemie und Biologie visuell gemacht", badge: "Klasse 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Englisch", desc: "Grammatik, Verständnis, Schreiben und Literatur", badge: "Klasse 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "Sozialkunde", desc: "Geschichte, Geografie, Staatsbürgerkunde und Wirtschaft", badge: "Klasse 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Informatik", desc: "Grundlagen der Programmierung, MS Office und digitale Fähigkeiten", badge: "Klasse 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Laborpraktika", desc: "Virtuelle Experimente mit Schritt-für-Schritt-Anleitung", badge: "Klasse 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Aufsatzschreiben", desc: "Struktur, Vokabular und Schreibfähigkeiten für Prüfungen", badge: "Klasse 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "Sprachen", desc: "Hindi, Sanskrit, Französisch und regionale Sprachen", badge: "Klasse 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Vorbereitung für Prelims, Mains und Interview mit aktuellen Angelegenheiten", tag: "Öffentlicher Dienst", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Vollständige Vorbereitung für Maharashtra Staatsdienste", tag: "Staatsdienste", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biologie, Physik und Chemie für medizinischen Zugang", tag: "Medizin", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Mathematik, Physik und Chemie für IIT/NIT Zugang", tag: "Ingenieurwesen", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS Vorbereitung", desc: "Grundlagen und klinisches Wissen für Medizinstudenten", tag: "Medizin", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Ingenieurwesen", desc: "Kernfächer des Ingenieurwesens - CSE, ECE, Mechanik, Bau", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Recht", desc: "Juristisches Denken, GK und Englisch für Rechtszugang", tag: "Recht", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Quantitativ, verbal und DILR für Top-Business-Schulen", tag: "Management", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "Bankwesen / IBPS", desc: "Denken, Mathematik und Englisch für Bankprüfungen", tag: "Bankwesen", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Verteidigung", desc: "Mathematik, GK und SSB Vorbereitung für Streitkräfte", tag: "Verteidigung", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Fortgeschrittene Ingenieurwissenschaften für PSU / M.Tech", tag: "Postgraduiert", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Buchhaltung, Steuern und Finanzberufskurse", tag: "Finanzen", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "Leistungstests", title: "Knacke die härtesten Prüfungen", desc: "Fokussierte Vorbereitung auf wettbewerbsfähige Prüfungen mit strukturierten Wegen.", stat1Title: "12 Pfade", stat1Desc: "verschiedene Kurse", stat2Title: "Prüfungen", stat2Desc: "Üben unter Druck", stat3Title: "Ränge", stat3Desc: "klares Leistungsfeedback", pill1: "Tägliche Tests", pill2: "Rangvorhersage", pill3: "Lehrplantracker", floatingChips: ["AIR 184", "98 %ile Ziel", "Nächster Mock 07:30"] },
+    scene: { today: "HEUTE", streak: "SERIE", days: "Tage", revision: "WDH", grade: "A+", score: "PUNKTE", mockClear: "Test OK", hi: "Hallo", air: "RANG" }
   },
   ja: {
     nav: { appName: "XQLアカデミー", tagline: "学ぶ · 継続 · 勝つ", login: "ログイン", signup: "登録" },
     hero: { title1: "何でも学ぼう", title2: "毎日レベルアップ。", selectLanguage: "学びたい言語..." },
     kids: { tag: "子供向け", badge: "遊びながら進歩", title: "インタラクティブなトピック", desc: "子供たちが探求するのが好きなものすべて...", artTitle: "物語、音声、報酬、そして小さな勝利。", artDesc: "安全でカラフルな専用の子供向けビュー。", stat1Title: "5分", stat1Desc: "短時間のプレイ", stat2Title: "毎日", stat2Desc: "継続の星と報酬", stat3Title: "話す", stat3Desc: "聞いて、繰り返して、笑う" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABCと単語", desc: "アルファベット、発音、基本的な語彙を学びます", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "数字と数学", desc: "楽しい視覚ゲームで数え、足し算、引き算をします", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "私たちの周りの世界", desc: "動物、自然、惑星、驚くべき科学的事実", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "芸術と創造性", desc: "色、形、描画、創造的な表現", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "お話の時間", desc: "読み取りと想像力を育てるインタラクティブな物語", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "話して学ぶ", desc: "言葉を発音し、話す自信を築きます", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "パズルと論理", desc: "思考と問題解決を鋭くする脳トレ", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "韻と歌", desc: "音楽、リズム、記憶の歌を通じて学びます", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "学生向け", badge: "集中した勢い", artTitle: "アクティブでモダンな学習スペース。", artDesc: "アニメーション化されたフィードバックによるシャープな学生体験。", stat1Title: "12", stat1Desc: "ガイド付きの科目", stat2Title: "迅速", stat2Desc: "復習ループ", stat3Title: "ライブ", stat3Desc: "進行状況バーと目標", title: "学校の科目をマスター", desc: "グレード1〜12向けの構造化されたレッスン。 クイズと説明で習得。", pill1: "試験対策", pill2: "アニメーションの進行", pill3: "高速復習" },
-    exams: { tag: "競争試験", title: "最も難しい試験を突破", desc: "構造化されたパスや模擬テストでの競争試験の準備。", stat1Title: "12コース", stat1Desc: "複数のパス", stat2Title: "模擬テスト", stat2Desc: "プレッシャーの中の練習", stat3Title: "ランク付け", stat3Desc: "明確なフィードバック", pill1: "毎日のテスト", pill2: "ランク予測", pill3: "シラバストラッカー" }
+    studentsTopics: [
+      { icon: "📐", title: "数学", desc: "代数、幾何、三角法、微積分", badge: "クラス6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "科学", desc: "物理、化学、生物を視覚的に", badge: "クラス6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "英語", desc: "文法、理解、書き取り、文学", badge: "クラス1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "社会科", desc: "歴史、地理、公民、経済", badge: "クラス6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "コンピュータ科学", desc: "プログラミングの基礎、MS Office、デジタルスキル", badge: "クラス6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "実験実習", desc: "ステップバイステップのガイド付き仮想実験", badge: "クラス9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "作文", desc: "試験のための構造、語彙、書き取りスキル", badge: "クラス8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "言語", desc: "ヒンディー、サンスクリット、フランス語、地域言語", badge: "クラス1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "時事問題を含む予備、メイン、面接の準備", tag: "公務員", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "マハラシュトラ州公務員の完全準備", tag: "州公務員", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "医学入試のための生物、物理、化学", tag: "医学", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT入試のための数学、物理、化学", tag: "工学", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS準備", desc: "医学生のための基礎と臨床知識", tag: "医学", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "工学", desc: "工学のコア科目 - CSE, ECE, 機械, 土木", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / 法", desc: "法入試のための法的推論、GK、英語", tag: "法", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "トップビジネススクール入試のための定量、言語、DILR", tag: "マネジメント", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "銀行 / IBPS", desc: "銀行試験のための推論、数学、英語", tag: "銀行", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / 防衛", desc: "軍隊のための数学、GK、SSB準備", tag: "防衛", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "PSU / M.Techのための高度な工学と科学", tag: "大学院", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "会計、税務、金融の専門コース", tag: "金融", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "競争試験", title: "最も難しい試験を突破", desc: "構造化されたパスや模擬テストでの競争試験の準備。", stat1Title: "12コース", stat1Desc: "複数のパス", stat2Title: "模擬テスト", stat2Desc: "プレッシャーの中の練習", stat3Title: "ランク付け", stat3Desc: "明確なフィードバック", pill1: "毎日のテスト", pill2: "ランク予測", pill3: "シラバストラッカー", floatingChips: ["AIR 184", "98 %ile 目標", "次のモック 07:30"] },
+    scene: { today: "今日", streak: "連続", days: "日間", revision: "復習", grade: "A+", score: "スコア", mockClear: "模試合格", hi: "こんにちは", air: "順位" }
   },
   ko: {
     nav: { appName: "XQL 아카데미", tagline: "학습 · 연속 · 승리", login: "로그인", signup: "가입하기" },
     hero: { title1: "무엇이든 배우세요.", title2: "매일 레벨업.", selectLanguage: "제가 배우고 싶은 것은..." },
     kids: { tag: "어린이용", badge: "즐거운 진행", title: "인터랙티브 주제 세계", desc: "아이들이 좋아하는 모든 것...", artTitle: "이야기, 소리, 보상을 한곳에서.", artDesc: "안전하고 컬러풀하며 흥미진진한 전용 보기.", stat1Title: "5분", stat1Desc: "짧은 플레이 세션", stat2Title: "매일", stat2Desc: "연속 보상", stat3Title: "말하기", stat3Desc: "듣고 따라하며 웃기" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC와 단어", desc: "알파벳, 발음 및 기본 어휘를 배우세요", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "숫자와 수학", desc: "재미있는 시각 게임으로 숫자를 세고 덧셈과 뺄셈을 배우세요", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "우리 주변 세계", desc: "동물, 자연, 행성 및 놀라운 과학적 사실", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "예술과 창의력", desc: "색깔, 형태, 그리기 및 창의적 표현", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "이야기 시간", desc: "독서와 상상력을 키우는 상호작용 이야기", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "말하고 배우기", desc: "단어를 발음하고 말하기 자신감을 키우세요", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "퍼즐과 논리", desc: "사고력과 문제 해결 능력을 높이는 두뇌 게임", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "운율과 노래", desc: "음악, 리듬 및 암송 노래로 배우세요", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "학생용", badge: "집중된 추진력", artTitle: "눈에 띄는 발전을 위한 학습 공간.", artDesc: "스마트한 시각 및 피드백.", stat1Title: "12", stat1Desc: "가이드 제공 과목", stat2Title: "빠른", stat2Desc: "복습 루프", stat3Title: "라이브", stat3Desc: "진행 표시줄", title: "학교 과목 마스터하기", desc: "1-12학년을 위한 체계적인 수업. 퀴즈로 과목을 마스터하세요.", pill1: "시험 대비", pill2: "애니메이션 진행", pill3: "빠른 복습" },
-    exams: { tag: "경쟁 시험", title: "가장 어려운 시험 돌파", desc: "체계적인 경로를 제공하는 경쟁 시험 준비.", stat1Title: "12 경로", stat1Desc: "다양한 교육 과정", stat2Title: "모의고사", stat2Desc: "실전 연습", stat3Title: "순위 상승", stat3Desc: "명확한 피드백", pill1: "일일 테스트", pill2: "순위 예측", pill3: "학습 진행기" }
+    studentsTopics: [
+      { icon: "📐", title: "수학", desc: "대수, 기하, 삼각법 및 미적분", badge: "6-12학년", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "과학", desc: "물리, 화학 및 생물을 시각적으로 배우세요", badge: "6-12학년", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "영어", desc: "문법, 독해, 작문 및 문학", badge: "1-12학년", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "사회", desc: "역사, 지리, 시민 및 경제", badge: "6-10학년", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "컴퓨터 과학", desc: "프로그래밍 기초, MS Office 및 디지털 기술", badge: "6-12학년", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "실험 실습", desc: "단계별 가이드가 포함된 가상 실험", badge: "9-12학년", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "에세이 작성", desc: "시험 작문을 위한 구조, 어휘 및 기술", badge: "8-12학년", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "언어", desc: "힌디어, 산스크리트, 프랑스어 및 지역어", badge: "1-12학년", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "예비, 메인, 면접 준비와 시사", tag: "공무원", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "마하라슈트라 주 공무원 준비", tag: "주 공무원", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "의대 입시를 위한 생물, 물리, 화학", tag: "의학", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT 입시를 위한 수학, 물리, 화학", tag: "공학", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS 준비", desc: "의대생을 위한 기초 및 임상 지식", tag: "의학", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "공학", desc: "CSE, ECE, 기계, 토목 등 공학 핵심 과목", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / 법", desc: "법학 입시를 위한 법적 추론, GK 및 영어", tag: "법", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Top 비즈니스 스쿨을 위한 정량, 언어, DILR", tag: "경영", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "은행 / IBPS", desc: "은행 시험을 위한 추리, 수학, 영어", tag: "은행", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / 방위", desc: "군 지원을 위한 수학, GK, SSB 준비", tag: "방위", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "PSU / M.Tech를 위한 고급 공학 및 과학", tag: "대학원", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "회계, 세무, 금융 전문 과정", tag: "금융", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "경쟁 시험", title: "가장 어려운 시험 돌파", desc: "체계적인 경로를 제공하는 경쟁 시험 준비.", stat1Title: "12 경로", stat1Desc: "다양한 교육 과정", stat2Title: "모의고사", stat2Desc: "실전 연습", stat3Title: "순위 상승", stat3Desc: "명확한 피드백", pill1: "일일 테스트", pill2: "순위 예측", pill3: "학습 진행기", floatingChips: ["AIR 184", "98 %ile 목표", "다음 모의 07:30"] },
+    scene: { today: "오늘", streak: "연속", days: "일", revision: "복습", grade: "A+", score: "점수", mockClear: "모의 완료", hi: "안녕", air: "순위" }
   },
   hi: {
     nav: { appName: "एक्सक्यूएल अकादमी", tagline: "सीखें · स्ट्रीक · जीतें", login: "लॉग इन", signup: "साइन अप" },
     hero: { title1: "कुछ भी सीखें।", title2: "रोजाना आगे बढ़ें।", selectLanguage: "मैं सीखना चाहता हूँ..." },
     kids: { tag: "बच्चों के लिए", badge: "खेल-खेल में प्रगति", title: "विषयों की इंटरैक्टिव दुनिया", desc: "वह सब कुछ जो बच्चों को पसंद है...", artTitle: "कहानियां, ध्वनियां, इनाम और एक खुशहाल जगह में जीतें।", artDesc: "एक समर्पित किड्स व्यू जो सुरक्षित और रंगीन लगता है।", stat1Title: "5 मिनट", stat1Desc: "छोटे-छोटे खेलने के सत्र", stat2Title: "रोजाना", stat2Desc: "स्ट्रीक स्टार्स और इनाम", stat3Title: "बोलें", stat3Desc: "सुनें, दोहराएं और मुस्कुराएं" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC और शब्द", desc: "अक्षर, फोनेटिक्स और बुनियादी शब्दावली सीखें", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "संख्या और गणित", desc: "मज़ेदार विज़ुअल गेम्स के साथ गिनें, जोड़-घटाव करें", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "हमारे चारों ओर की दुनिया", desc: "जानवर, प्रकृति, ग्रह और रोचक विज्ञान तथ्य", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "कला और रचनात्मकता", desc: "रंग, आकार, ड्राइंग और रचनात्मक अभिव्यक्ति", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "कहानी समय", desc: "इंटरैक्टिव कहानियां जो पढ़ने और कल्पना बढ़ाती हैं", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "बोलो और सीखो", desc: "शब्दों का उच्चारण करें और बोलने के आत्मविश्वास को बढ़ाएं", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "पहेली और तर्क", desc: "दिमागी पहेलियाँ जो सोच और समस्या समाधान को तेज करती हैं", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "तुक्बंद और गाने", desc: "संगीत, लय और यादगार गीतों के माध्यम से सीखें", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "छात्रों के लिए", badge: "केंद्रित गति", artTitle: "अध्ययन स्थान जो सक्रिय और प्रगति के लिए बनाए गए हैं।", artDesc: "स्मार्ट विज़ुअल्स के साथ एक तेज छात्र अनुभव।", stat1Title: "12", stat1Desc: "निर्देशित अभ्यास के साथ विषय", stat2Title: "त्वरित", stat2Desc: "रिवीजन लूप", stat3Title: "लाइव", stat3Desc: "प्रगति और लक्ष्य", title: "स्कूल के विषयों में अव्वल आएं", desc: "कक्षा 1-12 के लिए संरचित पाठ्यक्रम।", pill1: "परीक्षा अभ्यास", pill2: "एनिमेटेड प्रगति", pill3: "तेज रिवीजन" },
-    exams: { tag: "प्रतियोगी परीक्षाएँ", title: "सबसे कठिन परीक्षाएँ पास करें", desc: "भारत की प्रतियोगी परीक्षाओं की तैयारी।", stat1Title: "12 ट्रैक", stat1Desc: "विविध पथ", stat2Title: "समयबद्ध मॉक", stat2Desc: "दबाव में अभ्यास", stat3Title: "रैंक बढ़ाएँ", stat3Desc: "स्पष्ट प्रतिक्रिया", pill1: "दैनिक मॉक", pill2: "रैंक भविष्यवाणी", pill3: "पाठ्यक्रम ट्रैकर्स" }
+    studentsTopics: [
+      { icon: "📐", title: "गणित", desc: "बीजगणित, ज्यामिति, त्रिकोणमिति और कलन", badge: "कक्षा 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "विज्ञान", desc: "भौतिकी, रसायन और जीवविज्ञान को दृश्य बनाएं", badge: "कक्षा 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "अंग्रेज़ी", desc: "व्याकरण, समझ, लेखन और साहित्य", badge: "कक्षा 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "सामाजिक अध्ययन", desc: "इतिहास, भूगोल, नागरिक और अर्थशास्त्र", badge: "कक्षा 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "कंप्यूटर विज्ञान", desc: "प्रोग्रामिंग बुनियादी बातें, MS Office और डिजिटल कौशल", badge: "कक्षा 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "प्रयोगशाला अभ्यास", desc: "स्टेप-बाय-स्टेप मार्गदर्शन के साथ आभासी प्रयोग", badge: "कक्षा 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "निबंध लेखन", desc: "परीक्षा लेखन के लिए संरचना, शब्दावली और लेखन कौशल", badge: "कक्षा 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "भाषाएँ", desc: "हिंदी, संस्कृत, फ्रेंच और क्षेत्रीय भाषाएँ", badge: "कक्षा 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "करंट अफेयर के साथ प्रिलिम्स, मेन्स और इंटरव्यू की तैयारी", tag: "सिविल सेवा", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "महाराष्ट्र राज्य सेवा की पूरी तैयारी", tag: "राज्य सेवा", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "चिकित्सा प्रवेश के लिए जीवविज्ञान, भौतिकी और रसायन", tag: "मेडिकल", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT प्रवेश के लिए गणित, भौतिकी और रसायन", tag: "इंजीनियरिंग", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS तैयारी", desc: "चिकित्सा छात्रों के लिए बुनियादी और क्लिनिकल ज्ञान", tag: "मेडिकल", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "इंजीनियरिंग", desc: "CSE, ECE, मैकेनिकल, सिविल जैसे कोर इंजीनियरिंग विषय", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / लॉ", desc: "कानूनी तर्क, GK और अंग्रेज़ी लॉ प्रवेश के लिए", tag: "कानून", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "शीर्ष बिजनेस स्कूलों के लिए क्वांट, वर्बल और DILR", tag: "प्रबंधन", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "बैंकिंग / IBPS", desc: "बैंक परीक्षा के लिए रीजनिंग, गणित और अंग्रेज़ी", tag: "बैंकिंग", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / रक्षा", desc: "सशस्त्र बलों के लिए गणित, GK और SSB तैयारी", tag: "रक्षा", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "PSU / M.Tech के लिए उन्नत इंजीनियरिंग और विज्ञान", tag: "पोस्टग्रेजुएट", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "बहीखाता, कर और वित्तीय पेशेवर पाठ्यक्रम", tag: "वित्त", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "प्रतियोगी परीक्षाएँ", title: "सबसे कठिन परीक्षाएँ पास करें", desc: "भारत की प्रतियोगी परीक्षाओं की तैयारी।", stat1Title: "12 ट्रैक", stat1Desc: "विविध पथ", stat2Title: "समयबद्ध मॉक", stat2Desc: "दबाव में अभ्यास", stat3Title: "रैंक बढ़ाएँ", stat3Desc: "स्पष्ट प्रतिक्रिया", pill1: "दैनिक मॉक", pill2: "रैंक भविष्यवाणी", pill3: "पाठ्यक्रम ट्रैकर्स", floatingChips: ["AIR 184", "98 %ile लक्ष्य", "अगला मॉक 07:30"] },
+    scene: { today: "आज", streak: "स्ट्रीक", days: "दिन", revision: "दोहराव", grade: "A+", score: "स्कोर", mockClear: "मॉक पास", hi: "नमस्ते", air: "रैंक" }
   },
   zh: {
     nav: { appName: "XQL学院", tagline: "学习 · 坚持 · 成功", login: "登录", signup: "注册" },
     hero: { title1: "学习任何东西。", title2: "每天提升。", selectLanguage: "我想学习..." },
     kids: { tag: "儿童", badge: "快乐的进步", title: "互动的世界", desc: "孩子们喜欢探索的一切...", artTitle: "故事、声音和奖励都在一个快乐的地方。", artDesc: "安全、色彩缤纷且激动人心的儿童专区。", stat1Title: "5分钟", stat1Desc: "游戏化学习", stat2Title: "每天", stat2Desc: "打卡星星", stat3Title: "口语", stat3Desc: "听、重复、笑" },
+    kidsTopics: [
+      { icon: "🔤", title: "字母和词汇", desc: "学习字母、发音和基础词汇", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "数字与数学", desc: "通过有趣的视觉游戏计数、加减", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "我们周围的世界", desc: "动物、自然、行星和惊人的科学事实", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "艺术与创造", desc: "颜色、形状、绘画和创造性表达", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "故事时间", desc: "互动故事帮助建立阅读和想象力", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "说与学", desc: "发音单词并建立说话信心", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "谜题与逻辑", desc: "锻炼思维和问题解决的脑力训练", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "儿歌与歌曲", desc: "通过音乐、节奏和记忆歌曲学习", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "学生", badge: "专注的学习", artTitle: "现代且活跃的学习空间。", artDesc: "智能视觉和动画反馈让你不断前进。", stat1Title: "12", stat1Desc: "有指导的科目", stat2Title: "快速", stat2Desc: "复习循环", stat3Title: "实时", stat3Desc: "进度条和目标", title: "掌握学校科目", desc: "适合1-12年级的系统化课程。通过测验和讲解掌握每一门科目。", pill1: "考试演练", pill2: "动画进度", pill3: "快速复习" },
-    exams: { tag: "竞争性考试", title: "攻克最难的考试", desc: "通过系统的真题和测验，专注于最硬核的考试准备。", stat1Title: "12 条路径", stat1Desc: "多种追踪", stat2Title: "模考", stat2Desc: "实战演练", stat3Title: "排名提升", stat3Desc: "清晰的绩效反馈", pill1: "每日测验", pill2: "排名预测", pill3: "教学大纲追踪" }
+    studentsTopics: [
+      { icon: "📐", title: "数学", desc: "代数、几何、三角和微积分", badge: "6-12年级", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "科学", desc: "物理、化学和生物的可视化学习", badge: "6-12年级", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "英语", desc: "语法、理解、写作和文学", badge: "1-12年级", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "社会学习", desc: "历史、地理、公民与经济", badge: "6-10年级", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "计算机科学", desc: "编程基础、MS Office 及数字技能", badge: "6-12年级", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "实验实习", desc: "带步骤指导的虚拟实验", badge: "9-12年级", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "作文写作", desc: "考试写作的结构、词汇和写作技巧", badge: "8-12年级", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "语言", desc: "印地语、梵语、法语和区域语言", badge: "1-12年级", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "带时事的预备、主考和面试准备", tag: "公务员", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "马哈拉施特拉州公务员完整准备", tag: "州公务员", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "医学入学的生物、物理和化学", tag: "医疗", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT 入学数学、物理和化学", tag: "工程", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS 准备", desc: "医学生的基础和临床知识", tag: "医疗", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "工程", desc: "CSE、ECE、机械、土木等核心工程科目", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / 法律", desc: "法学入学的法律推理、GK 和英语", tag: "法律", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "顶级商学院的定量、语言和 DILR", tag: "管理", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "银行 / IBPS", desc: "银行考试的推理、数学和英语", tag: "银行", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / 国防", desc: "军队准备的数学、GK 和 SSB", tag: "国防", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "PSU / M.Tech 的高级工程与科学", tag: "研究生", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "会计、税务和金融专业课程", tag: "金融", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "竞争性考试", title: "攻克最难的考试", desc: "通过系统的真题和测验，专注于最硬核的考试准备。", stat1Title: "12 条路径", stat1Desc: "多种追踪", stat2Title: "模考", stat2Desc: "实战演练", stat3Title: "排名提升", stat3Desc: "清晰的绩效反馈", pill1: "每日测验", pill2: "排名预测", pill3: "教学大纲追踪", floatingChips: ["AIR 184", "98 %ile 目标", "下次模拟 07:30"] },
+    scene: { today: "今天", streak: "连续", days: "天", revision: "复习", grade: "A+", score: "分数", mockClear: "模考通过", hi: "你好", air: "排名" }
   },
   it: {
     nav: { appName: "Accademia XQL", tagline: "Impara · Serie · Vinci", login: "ACCEDI", signup: "ISCRIVITI" },
     hero: { title1: "Impara di tutto.", title2: "Sali di livello ogni giorno.", selectLanguage: "Voglio imparare..." },
     kids: { tag: "Per Bambini", badge: "Progresso giocoso", title: "Mondo interattivo", desc: "Un mix di tutto ciò che i bambini amano...", artTitle: "Storie, suoni e ricompense in uno spazio felice.", artDesc: "Una vista per bambini dedicata, sicura e colorata.", stat1Title: "5 min", stat1Desc: "gioco breve", stat2Title: "Quotidiano", stat2Desc: "stelle e premi", stat3Title: "Parla", stat3Desc: "ascolta, ripeti e sorridi" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC e Parole", desc: "Impara l'alfabeto, la fonetica e il vocabolario di base", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Numeri e Matematica", desc: "Conta, somma e sottrai con giochi visivi divertenti", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "Il mondo intorno a noi", desc: "Animali, natura, pianeti e fatti scientifici sorprendenti", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Arte e Creatività", desc: "Colori, forme, disegno ed espressione creativa", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Ora delle Storie", desc: "Storie interattive che sviluppano lettura e immaginazione", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Parla e Impara", desc: "Pronuncia parole e costruisci fiducia nel parlare", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Giochi di Logica", desc: "Enigmi mentali che affinano il pensiero e la risoluzione dei problemi", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Rime e Canzoni", desc: "Impara con musica, ritmo e canzoni da memorizzare", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "Per Studenti", badge: "Slancio concentrato", artTitle: "Spazi di studio attivi e moderni.", artDesc: "Un'esperienza studentesca con elementi visivi intelligenti.", stat1Title: "12", stat1Desc: "materie guidate", stat2Title: "Veloce", stat2Desc: "cicli di revisione", stat3Title: "Live", stat3Desc: "barre di avanzamento", title: "Supera le tue materie", desc: "Lezioni strutturate per le classi 1-12. Padroneggia ogni materia con i quiz.", pill1: "Esercizi d'esame", pill2: "Progresso animato", pill3: "Revisione veloce" },
-    exams: { tag: "Esami Competitivi", title: "Supera gli esami più duri", desc: "Preparazione mirata per gli esami competitivi con percorsi strutturati.", stat1Title: "12 Percorsi", stat1Desc: "vari percorsi", stat2Title: "Simulazioni", stat2Desc: "pratica sotto pressione", stat3Title: "Classifiche", stat3Desc: "feedback chiaro", pill1: "Test quotidiani", pill2: "Previsione rango", pill3: "Tracciamento programma" }
+    studentsTopics: [
+      { icon: "📐", title: "Matematica", desc: "Algebra, geometria, trigonometria e calcolo", badge: "Classe 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Scienze", desc: "Fisica, chimica e biologia rese visive", badge: "Classe 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Inglese", desc: "Grammatica, comprensione, scrittura e letteratura", badge: "Classe 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "Studi Sociali", desc: "Storia, geografia, educazione civica ed economia", badge: "Classe 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Informatica", desc: "Concetti base di programmazione, MS Office e competenze digitali", badge: "Classe 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Pratiche di Laboratorio", desc: "Esperimenti virtuali con guida passo passo", badge: "Classe 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Scrittura di Saggi", desc: "Struttura, vocabolario e abilità di scrittura per esami", badge: "Classe 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "Lingue", desc: "Hindi, sanscrito, francese e lingue regionali", badge: "Classe 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Preparazione Prelims, Mains e colloquio con attualità", tag: "Servizi Civili", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Preparazione completa per i servizi statali del Maharashtra", tag: "Servizi Statali", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biologia, Fisica e Chimica per l'ammissione medica", tag: "Medico", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Matematica, Fisica e Chimica per l'ingresso IIT/NIT", tag: "Ingegneria", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "Preparazione MBBS", desc: "Conoscenze di base e cliniche per studenti di medicina", tag: "Medico", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Ingegneria", desc: "Materie ingegneristiche di base - CSE, ECE, Meccanica, Civile", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Diritto", desc: "Ragionamento legale, GK e inglese per l'accesso legale", tag: "Diritto", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Quantitativo, verbale e DILR per le ammissioni alle business school", tag: "Gestione", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "Banking / IBPS", desc: "Ragionamento, matematica e inglese per esami bancari", tag: "Bancario", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Difesa", desc: "Matematica, GK e preparazione SSB per le forze armate", tag: "Difesa", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Ingegneria avanzata e scienze per PSU / M.Tech", tag: "Postgrad", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Contabilità, tassazione e corsi professionali finanziari", tag: "Finanza", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "Esami Competitivi", title: "Supera gli esami più duri", desc: "Preparazione mirata per gli esami competitivi con percorsi strutturati.", stat1Title: "12 Percorsi", stat1Desc: "vari percorsi", stat2Title: "Simulazioni", stat2Desc: "pratica sotto pressione", stat3Title: "Classifiche", stat3Desc: "feedback chiaro", pill1: "Test quotidiani", pill2: "Previsione rango", pill3: "Tracciamento programma", floatingChips: ["AIR 184", "Obiettivo 98 %ile", "Prossimo Mock 07:30"] },
+    scene: { today: "OGGI", streak: "SERIE", days: "Giorni", revision: "RIP", grade: "A+", score: "PUNTEGGIO", mockClear: "Sim. OK", hi: "Ciao", air: "RANK" }
   },
   pt: {
     nav: { appName: "Academia XQL", tagline: "Aprenda · Sequência · Ganhe", login: "ENTRAR", signup: "INSCREVER-SE" },
     hero: { title1: "Aprenda qualquer coisa.", title2: "Suba de nível diariamente.", selectLanguage: "Eu quero aprender..." },
-    kids: { tag: "Para Crianças", badge: "Progresso lúdico", title: "Mundo interativo", desc: "Uma mistura de tudo que as crianças adoram explora...", artTitle: "Histórias, sons e recompensas em um lugar feliz.", artDesc: "Uma visão dedicada e segura.", stat1Title: "5 min", stat1Desc: "sessões de jogo", stat2Title: "Diariamente", stat2Desc: "estrelas de racha", stat3Title: "Fale", stat3Desc: "ouça e repita" },
+    kids: { tag: "Para Crianças", badge: "Progresso lúdico", title: "Mundo interativo", desc: "Uma mistura de tudo que as crianças adoram explorar...", artTitle: "Histórias, sons e recompensas em um lugar feliz.", artDesc: "Uma visão dedicada e segura.", stat1Title: "5 min", stat1Desc: "sessões de jogo", stat2Title: "Diariamente", stat2Desc: "estrelas de racha", stat3Title: "Fale", stat3Desc: "ouça e repita" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC e Palavras", desc: "Aprenda alfabetos, fonética e vocabulário básico", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Números e Matemática", desc: "Conte, some e subtraia com jogos visuais divertidos", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "O Mundo ao Nosso Redor", desc: "Animais, natureza, planetas e fatos científicos incríveis", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Arte e Criatividade", desc: "Cores, formas, desenho e expressão criativa", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Hora da História", desc: "Histórias interativas que constroem leitura e imaginação", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Fale e Aprenda", desc: "Pronuncie palavras e ganhe confiança para falar", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Quebra-cabeças e Lógica", desc: "Desafios mentais que aguçam o pensamento e a resolução de problemas", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Rimas e Canções", desc: "Aprenda através da música, ritmo e canções de memória", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "Para Estudantes", badge: "Foco total", artTitle: "Espaços ativos e modernos.", artDesc: "Uma experiência com visuais inteligentes.", stat1Title: "12", stat1Desc: "matérias com guias", stat2Title: "Rápido", stat2Desc: "ciclos de revisão", stat3Title: "Ao Vivo", stat3Desc: "barras de progresso", title: "Domine suas disciplinas", desc: "Aulas estruturadas. Domine cada assunto.", pill1: "Prática p/ Exames", pill2: "Progresso Animado", pill3: "Revisão Rápida" },
-    exams: { tag: "Exames Competitivos", title: "Passe nos piores exames", desc: "Preparação focada e simulados.", stat1Title: "12 Trilhas", stat1Desc: "caminhos", stat2Title: "Simulados", stat2Desc: "pressão", stat3Title: "Ranking", stat3Desc: "feedback forte", pill1: "Testes Diários", pill2: "Previsão", pill3: "Rastreio" }
+    studentsTopics: [
+      { icon: "📐", title: "Matemática", desc: "Álgebra, geometria, trigonometria e cálculo", badge: "Classe 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Ciências", desc: "Física, química e biologia de forma visual", badge: "Classe 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Inglês", desc: "Gramática, compreensão, escrita e literatura", badge: "Classe 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "Estudos Sociais", desc: "História, geografia, civismo e economia", badge: "Classe 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Ciência da Computação", desc: "Conceitos básicos de programação, MS Office e habilidades digitais", badge: "Classe 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Práticas de Laboratório", desc: "Experimentos virtuais com orientação passo a passo", badge: "Classe 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Redação de Ensaios", desc: "Estrutura, vocabulário e habilidades de escrita para exames", badge: "Classe 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "Idiomas", desc: "Hindi, sânscrito, francês e línguas regionais", badge: "Classe 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Preparação para Prelims, Mains e entrevista com atualidades", tag: "Serviços Civis", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Preparação completa para serviços estaduais de Maharashtra", tag: "Serviços Estaduais", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biologia, Física e Química para entrada médica", tag: "Médico", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Matemática, Física e Química para entrada IIT/NIT", tag: "Engenharia", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "Preparação MBBS", desc: "Conhecimento básico e clínico para estudantes de medicina", tag: "Médico", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Engenharia", desc: "Disciplinas de engenharia fundamentais - CSE, ECE, Mecânica, Civil", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Direito", desc: "Raciocínio jurídico, GK e inglês para ingresso em direito", tag: "Direito", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Quantitativo, verbal e DILR para escolas de negócios", tag: "Gestão", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "Banking / IBPS", desc: "Raciocínio, matemática e inglês para provas bancárias", tag: "Bancário", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Defesa", desc: "Matemática, GK e preparação SSB para forças armadas", tag: "Defesa", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Engenharia avançada e ciência para PSU / M.Tech", tag: "Pós-graduação", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Contabilidade, tributação e cursos profissionais de finanças", tag: "Finanças", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "Exames Competitivos", title: "Passe nos piores exames", desc: "Preparação focada e simulados.", stat1Title: "12 Trilhas", stat1Desc: "caminhos", stat2Title: "Simulados", stat2Desc: "pressão", stat3Title: "Ranking", stat3Desc: "feedback forte", pill1: "Testes Diários", pill2: "Previsão", pill3: "Rastreio", floatingChips: ["AIR 184", "98 %ile Alvo", "Próximo Mock 07:30"] },
+    scene: { today: "HOJE", streak: "SEQUÊNCIA", days: "Dias", revision: "REV", grade: "A+", score: "PONTOS", mockClear: "Simulado OK", hi: "Olá", air: "RANK" }
   },
   ru: {
     nav: { appName: "Академия XQL", tagline: "Учись · Серия · Побеждай", login: "ВОЙТИ", signup: "РЕГИСТРАЦИЯ" },
     hero: { title1: "Изучай всё что угодно.", title2: "Повышай уровень каждый день.", selectLanguage: "Я хочу изучать..." },
     kids: { tag: "Для Детей", badge: "Игровой прогресс", title: "Интерактивный мир", desc: "Смесь всего, что любят дети...", artTitle: "Истории, звуки и награды в одном счастливом месте.", artDesc: "Безопасное и красочное пространство.", stat1Title: "5 мин", stat1Desc: "короткие сессии", stat2Title: "Ежедневно", stat2Desc: "звезды серии", stat3Title: "Говори", stat3Desc: "слушай и повторяй" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC и слова", desc: "Изучайте алфавит, фонетику и базовый словарный запас", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Числа и математика", desc: "Считайте, складывайте и вычитайте с помощью визуальных игр", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "Мир вокруг нас", desc: "Животные, природа, планеты и удивительные научные факты", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Искусство и творчество", desc: "Цвета, формы, рисование и творческое выражение", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Время сказки", desc: "Интерактивные истории для чтения и воображения", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Говори и учись", desc: "Произносите слова и приобретайте уверенность в речи", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Головоломки и логика", desc: "Ментальные задачи, развивающие мышление и решение проблем", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Стихи и песни", desc: "Учитесь через музыку, ритм и запоминающиеся песни", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "Для Студентов", badge: "Сфокусированный импульс", artTitle: "Активные и современные учебные пространства.", artDesc: "Четкий опыт с умной визуализацией.", stat1Title: "12", stat1Desc: "предметов с руководством", stat2Title: "Быстро", stat2Desc: "циклы повторения", stat3Title: "В реальном времени", stat3Desc: "прогресс-бары", title: "Улучши оценки", desc: "Структурированные уроки для 1-12 классов.", pill1: "Экзаменационные тесты", pill2: "Живой прогресс", pill3: "Быстрое повторение" },
-    exams: { tag: "Сложные экзамены", title: "Сдай самые трудные тесты", desc: "Подготовка к сложнейшим экзаменам с тестами.", stat1Title: "12 Путей", stat1Desc: "разные курсы", stat2Title: "Тесты", stat2Desc: "практика под давлением", stat3Title: "Рейтинги", stat3Desc: "четкая обратная связь", pill1: "Ежедневные тесты", pill2: "Прогноз рейтинга", pill3: "Прогресс по темам" }
+    studentsTopics: [
+      { icon: "📐", title: "Математика", desc: "Алгебра, геометрия, тригонометрия и анализ", badge: "Классы 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Наука", desc: "Физика, химия и биология в визуальном формате", badge: "Классы 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Английский", desc: "Грамматика, чтение, письмо и литература", badge: "Классы 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "Обществознание", desc: "История, география, граждановедение и экономика", badge: "Классы 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Информатика", desc: "Основы программирования, MS Office и цифровые навыки", badge: "Классы 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Лабораторные", desc: "Виртуальные эксперименты с пошаговым руководством", badge: "Классы 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Написание эссе", desc: "Структура, словарный запас и навыки письма для экзаменов", badge: "Классы 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "Языки", desc: "Хинди, санскрит, французский и региональные языки", badge: "Классы 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Подготовка к Prelims, Mains и интервью с текущими событиями", tag: "Госслужба", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Полная подготовка к госслужбам Махараштры", tag: "Госслужбы штата", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Биология, физика и химия для медицинского вступления", tag: "Медицина", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Математика, физика и химия для IIT/NIT", tag: "Инженерия", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "Подготовка MBBS", desc: "Основы и клинические знания для студентов-медиков", tag: "Медицина", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Инженерия", desc: "Основные инженерные дисциплины — CSE, ECE, механика, гражданское", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Право", desc: "Юридическое мышление, GK и английский для права", tag: "Право", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Количественное, вербальное и DILR для бизнес-школ", tag: "Менеджмент", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "Банки / IBPS", desc: "Логика, математика и английский для банковских экзаменов", tag: "Банки", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Оборона", desc: "Математика, GK и SSB для силовых структур", tag: "Оборона", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Продвинутая инженерия и наука для PSU / M.Tech", tag: "Постград", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Бухучет, налоги и финансы", tag: "Финансы", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "Сложные экзамены", title: "Сдай самые трудные тесты", desc: "Подготовка к сложнейшим экзаменам с тестами.", stat1Title: "12 Путей", stat1Desc: "разные курсы", stat2Title: "Тесты", stat2Desc: "практика под давлением", stat3Title: "Рейтинги", stat3Desc: "четкая обратная связь", pill1: "Ежедневные тесты", pill2: "Прогноз рейтинга", pill3: "Прогресс по темам", floatingChips: ["AIR 184", "98 %ile Цель", "Следующий Mock 07:30"] },
+    scene: { today: "СЕГОДНЯ", streak: "СЕРИЯ", days: "Дней", revision: "ПОВ", grade: "A+", score: "БАЛЛ", mockClear: "Тест пройден", hi: "Привет", air: "РАНГ" }
   },
   ar: {
     nav: { appName: "أكاديمية XQL", tagline: "تعلم · استمر · اربح", login: "دخول", signup: "تسجيل" },
     hero: { title1: "تعلم أي شيء.", title2: "ارتقِ بمستواك يوميًا.", selectLanguage: "أريد أن أتعلم..." },
     kids: { tag: "للأطفال", badge: "لعب وتقدم", title: "عالم تفاعلي", desc: "مزيج من كل ما يحبه الأطفال...", artTitle: "قصص وأصوات ومكافآت.", artDesc: "بيئة آمنة وملونة وممتعة.", stat1Title: "5 دقائق", stat1Desc: "لعب سريع", stat2Title: "يومياً", stat2Desc: "نجوم استمرارية", stat3Title: "تحدث", stat3Desc: "استمع وكرر" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC والكلمات", desc: "تعلم الحروف، الصوتيات والمفردات الأساسية", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "الأرقام والرياضيات", desc: "عد، اجمع واطرح عبر ألعاب بصرية ممتعة", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "العالم من حولنا", desc: "الحيوانات والطبيعة والكواكب والحقائق العلمية", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "الفن والإبداع", desc: "الألوان والأشكال والرسم والتعبير الإبداعي", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "وقت القصة", desc: "قصص تفاعلية تبني القراءة والخيال", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "تحدث وتعلم", desc: "انطق الكلمات وابنِ ثقة في الحديث", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "الألغاز والمنطق", desc: "تمارين ذهنية تطور التفكير وحل المشكلات", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "الأغاني والقوافي", desc: "تعلم عبر الموسيقى والإيقاع والأغاني", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "للطلاب", badge: "تركيز مضاعف", artTitle: "مساحات دراسية نشطة.", artDesc: "تجربة بصرية ممتعة للطلاب.", stat1Title: "12", stat1Desc: "مواد وتوجيه", stat2Title: "سريع", stat2Desc: "مراجعة الامتحان", stat3Title: "مباشر", stat3Desc: "أهداف ومسار", title: "تفوق في دراستك", desc: "دروس منظمة للطلاب للتميز بالمدارس.", pill1: "تدريب امتحان", pill2: "تقدم ملحوظ", pill3: "مراجعة سهلة" },
-    exams: { tag: "الامتحانات التنافسية", title: "اجتز أصعب الاختبارات", desc: "إعداد ذكي وتدريب مكثف.", stat1Title: "12 مسار", stat1Desc: "مسارات تدريب", stat2Title: "تجارب", stat2Desc: "تدريب عملي", stat3Title: "ترتيب", stat3Desc: "متابعة أداء", pill1: "تجارب يومية", pill2: "توقع الترتيب", pill3: "متابعة المنهج" }
+    studentsTopics: [
+      { icon: "📐", title: "الرياضيات", desc: "الجبر والهندسة وحل المثلثات والتفاضل والتكامل", badge: "الصف 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "العلوم", desc: "الفيزياء والكيمياء والأحياء بطريقة مرئية", badge: "الصف 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "الإنجليزية", desc: "القواعد، الفهم، الكتابة والأدب", badge: "الصف 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "الدراسات الاجتماعية", desc: "التاريخ والجغرافيا والمواطنة والاقتصاد", badge: "الصف 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "علم الحاسوب", desc: "أساسيات البرمجة، MS Office والمهارات الرقمية", badge: "الصف 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "التجارب العملية", desc: "تجارب افتراضية مع إرشاد خطوة بخطوة", badge: "الصف 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "كتابة المقالات", desc: "الهيكل والمفردات ومهارات الكتابة للامتحانات", badge: "الصف 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "اللغات", desc: "الهندية والسنسكريتية والفرنسية واللغات الإقليمية", badge: "الصف 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "إعداد للإمتحان التمهيدي والرئيسي والمقابلة مع الشؤون الحالية", tag: "الخدمة المدنية", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "الإعداد الكامل لخدمات ولاية ماهاراشترا", tag: "خدمة الولاية", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "الأحياء والفيزياء والكيمياء لدخول الطب", tag: "طبي", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "الرياضيات والفيزياء والكيمياء لدخول IIT/NIT", tag: "هندسة", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "تحضير MBBS", desc: "المعرفة الأساسية والسريرية للطلاب الطبيين", tag: "طبي", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "الهندسة", desc: "المواد الهندسية الأساسية - CSE وECE والميكانيكا والمدني", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / القانون", desc: "التفكير القانوني وGK والإنجليزية للدخول القانوني", tag: "قانون", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "الكمية واللفظي وDILR لمدارس إدارة الأعمال", tag: "إدارة", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "البنوك / IBPS", desc: "المنطق والرياضيات والإنجليزية لامتحانات البنوك", tag: "بنك", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / الدفاع", desc: "الرياضيات وGK والتحضير لـ SSB للقوات المسلحة", tag: "دفاع", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "الهندسة المتقدمة والعلوم لـ PSU / M.Tech", tag: "دراسات عليا", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "المحاسبة والضرائب والمالية المهنية", tag: "المالية", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "الامتحانات التنافسية", title: "اجتز أصعب الاختبارات", desc: "إعداد ذكي وتدريب مكثف.", stat1Title: "12 مسار", stat1Desc: "مسارات تدريب", stat2Title: "تجارب", stat2Desc: "تدريب عملي", stat3Title: "ترتيب", stat3Desc: "متابعة أداء", pill1: "تجارب يومية", pill2: "توقع الترتيب", pill3: "متابعة المنهج", floatingChips: ["AIR 184", "هدف 98 %ile", "المحاكاة التالية 07:30"] },
+    scene: { today: "اليوم", streak: "سلسلة", days: "أيام", revision: "مراجعة", grade: "A+", score: "النتيجة", mockClear: "اجتاز المحاكاة", hi: "مرحبا", air: "الترتيب" }
   },
   mr: {
     nav: { appName: "XQL अकॅडमी", tagline: "शिका · स्ट्रिक · जिंका", login: "लॉग इन", signup: "साइन अप" },
     hero: { title1: "काहीही शिका.", title2: "दररोज पातळी वाढवा.", selectLanguage: "मला शिकायचे आहे..." },
-    kids: { tag: "मुलांसाठी", badge: "खेळकर प्रगती", title: "परस्परसंवादी जग", desc: "मुलांना आवडेल असे सर्वकाही...", artTitle: "गोष्टी, आवाज आणि बक्षिसे एकाच आनंदी जागेत.", artDesc: "सुरक्षित आणि रंगीत जागा.", stat1Title: "5 मिनिटे", stat1Desc: "लहान खेळ सत्र", stat2Title: "दररोज", stat2Desc: "स्ट्रिक स्टार्स", stat3Title: "बोला", stat3Desc: "ऐका आणि पुन्हा करा" },
+    kids: { tag: "मुलांसाठी", badge: "खेळकर प्रगती", title: "परस्परसंवादी जग", desc: "मुलांना आवडेल असे सर्वकाही...", artTitle: "गोष्टी, आवाज आणि बक्षिसे एकाच आनंदी जागेत.", artDesc: "सुरक्षित आणि रंगीत जागा.", stat1Title: "5 मिनिटे", stat1Desc: "लहान खेळ सत्र", stat2Title: "दररोज", stat2Desc: "स्ट्रिक स्टार्स", stat3Title: "बोला", stat3Desc: "ऐका आणि पुन्हा करा", pill1: "मजेदार खेळ", pill2: "दैनंदिन स्ट्रिक", pill3: "गोष्ट मोड" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC आणि शब्द", desc: "अक्षरे, ध्वनिशास्त्र आणि मूलभूत शब्दसंग्रह शिका", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "संख्या आणि गणित", desc: "मजेदार दृश्य खेळांसह मोजा, जोडा आणि वजा करा", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "आपल्या सभोवतालचे जग", desc: "प्राणी, निसर्ग, ग्रह आणि आश्चर्यकारक विज्ञान तथ्ये", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "कला आणि सृजनशीलता", desc: "रंग, आकार, चित्रकला आणि सर्जनशील अभिव्यक्ती", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "गोष्ट वेळ", desc: "वाचन आणि कल्पनाशक्ती विकसित करणाऱ्या परस्परसंवादी गोष्टी", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🗣️", title: "बोला आणि शिका", desc: "शब्द उच्चारा आणि बोलण्याचा आत्मविश्वास वाढवा", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "कोडी आणि तर्क", desc: "विचार आणि समस्या सोडवण्याची क्षमता वाढवणारे कोडे", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "यमक आणि गाणी", desc: "संगीत, लय आणि स्मृती गाण्यांद्वारे शिका", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "विद्यार्थ्यांसाठी", badge: "लक्ष्य केंद्रित", artTitle: "सक्रिय आणि आधुनिक अभ्यासाची ठिकाणे.", artDesc: "स्मार्ट व्हिज्युअल्स आणि फीडबॅक.", stat1Title: "12", stat1Desc: "मार्गदर्शित विषय", stat2Title: "जलद", stat2Desc: "परीक्षेपूर्वी रिव्हिजन", stat3Title: "थेट", stat3Desc: "प्रगती आणि ध्येये", title: "शाळेच्या विषयात अव्वल राहा", desc: "इयत्ता 1-12 साठी अभ्यासक्रम.", pill1: "परीक्षा सराव", pill2: "प्रगती ट्रॅकिंग", pill3: "जलद रिव्हिजन" },
-    exams: { tag: "स्पर्धा परीक्षा", title: "सर्वात कठीण परीक्षा पास करा", desc: "भारतातील स्पर्धा परीक्षांची तयारी.", stat1Title: "12 मार्ग", stat1Desc: "मार्गदर्शन", stat2Title: "मॉक टेस्ट", stat2Desc: "प्रत्यक्ष सराव", stat3Title: "रँक वाढ", stat3Desc: "स्पष्ट फीडबॅक", pill1: "दैनिक मॉक", pill2: "रँक अंदाज", pill3: "अभ्यासक्रम ट्रॅकर" }
+    studentsTopics: [
+      { icon: "📐", title: "गणित", desc: "बीजगणित, भूमिती, त्रिकोणमिती आणि कलन", badge: "इयत्ता 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "विज्ञान", desc: "भौतिकशास्त्र, रसायनशास्त्र आणि जीवशास्त्र दृश्यमान पद्धतीने", badge: "इयत्ता 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "इंग्रजी", desc: "व्याकरण, समज, लेखन आणि साहित्य", badge: "इयत्ता 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "सामाजिक अभ्यास", desc: "इतिहास, भूगोल, नागरिकशास्त्र आणि अर्थशास्त्र", badge: "इयत्ता 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "कंप्यूटर सायन्स", desc: "प्रोग्रामिंग बुनियादी, MS Office आणि डिजिटल कौशल्ये", badge: "इयatta 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "लॅब प्रॅक्टिकल्स", desc: "स्टेप-बाय-स्टेप मार्गदर्शिकेसह आभासी प्रयोग", badge: "इयatta 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "निबंध लेखन", desc: "परीक्षांसाठी रचना, शब्दसंपदा आणि लेखन कौशल्ये", badge: "इयatta 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "भाषा", desc: "हिंदी, संस्कृत, फ्रेंच आणि प्रादेशिक भाषा", badge: "इयatta 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "करंट अफेअर्ससह प्रिलिम्स, मेन्स व मुलाखत तयारी", tag: "सिव्हिल सेवा", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "महाराष्ट्र राज्य सेवांसाठी परिपूर्ण तयारी", tag: "राज्य सेवा", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "वैद्यकीय प्रवेशासाठी जीवशास्त्र, भौतिकशास्त्र आणि रसायनशास्त्र", tag: "वैद्यकीय", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT प्रवेशासाठी गणित, भौतिकशास्त्र आणि रसायनशास्त्र", tag: "इंजिनिअरिंग", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS तयारी", desc: "वैद्यकीय विद्यार्थ्यांसाठी पाया आणि क्लिनिकल ज्ञान", tag: "वैद्यकीय", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "इंजिनिअरिंग", desc: "CSE, ECE, मेकॅनिकल आणि सिव्हिल सारखी मुख्य अभियांत्रिकी विषय", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / कायदा", desc: "कायद्याचे विचार, GK आणि इंग्रजी कायद्यासाठी", tag: "कायदा", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "बिझनेस स्कूलसाठी परिमाणात्मक, शब्द आणि DILR", tag: "व्यवस्थापन", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "बँकिंग / IBPS", desc: "बँक परीक्षा साठी तर्क, गणित आणि इंग्रजी", tag: "बँकिंग", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / संरक्षण", desc: "सैन्यांसाठी गणित, GK आणि SSB तयारी", tag: "संरक्षण", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "PSU / M.Tech साठी प्रगत अभियांत्रिकी आणि विज्ञान", tag: "पदव्युत्तर", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "लेखांकन, कर आणि वित्तीय व्यावसायिक अभ्यासक्रम", tag: "वित्त", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "स्पर्धा परीक्षा", title: "सर्वात कठीण परीक्षा पास करा", desc: "भारतातील स्पर्धा परीक्षांची तयारी.", stat1Title: "12 मार्ग", stat1Desc: "मार्गदर्शन", stat2Title: "मॉक टेस्ट", stat2Desc: "प्रत्यक्ष सराव", stat3Title: "रँक वाढ", stat3Desc: "स्पष्ट फीडबॅक", pill1: "दैनिक मॉक", pill2: "रँक अंदाज", pill3: "अभ्यासक्रम ट्रॅकर", floatingChips: ["AIR 184", "98 %ile लक्ष्य", "पुढचा Mock 07:30"] },
+    scene: { today: "आज", streak: "स्ट्रीक", days: "दिवस", revision: "उजळणी", grade: "A+", score: "स्कोर", mockClear: "मॉक पास", hi: "नमस्कार", air: "रँक" }
   },
   ta: {
     nav: { appName: "XQL அகாடமி", tagline: "கற்று · தொடர் · வெல்", login: "உள்நுழைக", signup: "பதிவு செய்க" },
     hero: { title1: "எதையும் கற்றுக்கொள்ளுங்கள்.", title2: "தினமும் முன்னெறுங்கள்.", selectLanguage: "நான் கற்க விரும்புவது..." },
-    kids: { tag: "குழந்தைகளுக்காக", badge: "விளையாட்டான முன்னேற்றம்", title: "இண்டராக்டிவ் உலகம்", desc: "குழந்தைகள் விரும்பும் அனைத்தும்...", artTitle: "கதைகள், ஒலிகள் மற்றும் பரிசுகள்.", artDesc: "பாதுகாப்பான இட அமைப்பு.", stat1Title: "5 நிமிடம்", stat1Desc: "சிறிய விளையாட்டு", stat2Title: "தினசரி", stat2Desc: "பரிசுகள்", stat3Title: "பேசுங்கள்", stat3Desc: "கேட்டு திரும்ப சொல்லவும்" },
+    kids: { tag: "குழந்தைகளுக்காக", badge: "விளையாட்டான முன்னேற்றம்", title: "இண்டராக்டிஸ்ஜெய் அகுல்ம்", desc: "குழந்தைகள் விரும்பும் அனைத்தும்...", artTitle: "கதைகள், ஒலிகள் மற்றும் பரிசுகள்.", artDesc: "பாதுகாப்பான இட அமைப்பு.", stat1Title: "5 நிமிடம்", stat1Desc: "சிறிய விளையாட்டு", stat2Title: "தினசரி", stat2Desc: "பரிசுகள்", stat3Title: "பேசுங்கள்", stat3Desc: "கேட்டு திரும்ப சொல்லவும்" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC மற்றும் வார்த்தைகள்", desc: "எழுத்துக்கள், ஒலியியல் மற்றும் அடிப்படை சொற்கள் கற்று கொள்ளுங்கள்", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "எண்கள் மற்றும் கணிதம்", desc: "மகிழ்ச்சியான காட்சி விளையாட்டுகளுடன் எண்ணுங்கள், கூட்டுங்கள் மற்றும் கழிக்கவும்", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "எதிர்காலத்தின் உலகம்", desc: "விலங்குகள், இயற்கை, கிரகங்கள் மற்றும் ஆச்சரியமான அறிவியல் உண்மைகள்", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "கலை மற்றும் படைப்பாற்றல்", desc: "வண்ணங்கள், வடிவங்கள், வரைவில் மற்றும் படைப்பாற்றல் வெளிப்பாடு", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "கதை நேரம்", desc: "படித்துக் கற்பித்தல் மற்றும் கற்பனை வளர்க்கும் கலக்கமான கதைகள்", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "பேசு மற்றும் கற்று", desc: "சொற்களை மிகச்சரியாக உச்சரித்து பேசும் நம்பிக்கையை வளர்க்கவும்", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "மூளைப்பயிற்சி மற்றும் தர்க்கம்", desc: "அறிவுத்திறன் வளர்க்கும் புதிர்கள் மற்றும் சிக்கனங்கள்", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "வரிகள் மற்றும் பாடல்கள்", desc: "இசை, தாளம் மற்றும் நினைவூட்டும் பாடல்களால் கற்று கொள்ளுங்கள்", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "மாணவர்களுக்காக", badge: "கவனமான முன்னேற்றம்", artTitle: "சுறுசுறுப்பான படிப்பு இடங்கள்.", artDesc: "தெளிவான மாணவர் அனுபவம்.", stat1Title: "12", stat1Desc: "பாடங்கள்", stat2Title: "விரைவில்", stat2Desc: "திருப்புதல்", stat3Title: "நேரடி", stat3Desc: "இலக்குகள்", title: "பள்ளி பாடங்களை கற்று தேருங்கள்", desc: "வகுப்பு 1-12 பாடங்கள்.", pill1: "தேர்வு பயிற்சி", pill2: "முன்னேற்றம்", pill3: "விரைவான திருப்புதல்" },
-    exams: { tag: "போட்டித் தேர்வுகள்", title: "கடினமான தேர்வுகளை வெல்லுங்கள்", desc: "போட்டித் தேர்வுக்கான சிறந்த பயிற்சி.", stat1Title: "12 பாதைகள்", stat1Desc: "பல்வேறு பாடங்கள்", stat2Title: "மாதிரி தேர்வு", stat2Desc: "பயிற்சிகள்", stat3Title: "ரேங்க்", stat3Desc: "வளர்ச்சி அறிக்கை", pill1: "தினசரி டெஸ்ட்", pill2: "ரேங்க் கணிப்பு", pill3: "பாடத்திட்டங்கள்" }
+    studentsTopics: [
+      { icon: "📐", title: "கணிதம்", desc: "புணர்லோபம், உயிர்மின்னியல், திகிரி மற்றும் கணிதக் கணிதம்", badge: "வகுப்பு 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "அறிவியல்", desc: "தயாரிப்பு, வேதியியல் மற்றும் உயிரியல் காட்சிகளை", badge: "வகுப்பு 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "ஆங்கிலம்", desc: "வினா, படிப்பு, எழுத்து மற்றும் இலக்கியம்", badge: "வகுப்பு 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "சமூக அறிவியல்", desc: "வரலாறு, புவியியல், குடியுரிமை மற்றும் பொருளாதாரம்", badge: "வகுப்பு 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "கணினி அறிவியல்", desc: "தொடக்கம், MS Office மற்றும் டிஜிட்டல் திறன்கள்", badge: "வகுப்பு 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "பயிற்சி பயிற்சிகள்", desc: "படி படியாக வழிகாட்டும் மெய்நிகர் 실험", badge: "வகுப்பு 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "நூல்கள் எழுதுதல்", desc: "தற்சார்பு, சொற்பொருள் மற்றும் எழுதுதல் திறன்கள்", badge: "வகுப்பு 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "மொழிகள்", desc: "ஹிந்தி, நேரடி, பிரெஞ்சு மற்றும் பிராந்திய மொழிகள்", badge: "வகுப்பு 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "தற்போதைய நிகழ்ச்சிகளுடன் முன்னாள், மெயின்ஸ் மற்றும் நேர்காணல் பயிற்சி", tag: "அரசு சேவை", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "மஹாராஷ்டிரா மாநில சேவைகளுக்கான முழுமையான தயாரிப்பு", tag: "மாநில சேவைகள்", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "மருத்துவர் நுழைவுத் தேர்விற்கு உயிரியல், இயற்பியல் மற்றும் வேதியியல்", tag: "மருத்துவம்", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT நுழைவுக்கு கணிதம், இயற்பியல் மற்றும் வேதியியல்", tag: "பொறியியல்", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS தயாரிப்பு", desc: "மருத்துவ மாணவர்களுக்கு அடிப்படை மற்றும் மருத்துவ அறிவு", tag: "மருத்துவம்", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "பொறியியல்", desc: "CSE, ECE, மெக்கானிக்கல், சிவில் போன்ற 코어 பொரியியல் பாடங்கள்", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / சட்டம்", desc: "சட்ட சம்பந்தமான தர்க்கம், GK மற்றும் ஆங்கிலம்", tag: "சட்டம்", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "மேம்பாடதிய பாடநெறிகளுக்கான அளவுக்கூறு, வார்த்தை மற்றும் DILR", tag: "கையகத்தியம்", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "வங்கி / IBPS", desc: "வங்கி தேர்வுகளுக்கான காரணம், கணிதம் மற்றும் ஆங்கிலம்", tag: "வங்கி", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / பாதுகாப்பு", desc: "அரசியல் படைகளை 위한 கணிதம், GK மற்றும் SSB подготовки", tag: "பாதுகாப்பு", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "PSU / M.Tech க்கான மேம்பட்ட பொறியியல் மற்றும் அறிவியல்", tag: "முகாம்", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "கணக்கியல், வரி மற்றும் நிதி தொழில்முறை படிப்புகள்", tag: "நிதி", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "போட்டித் தேர்வுகள்", title: "கடினமான தேர்வுகளை வெல்லுங்கள்", desc: "போட்டித் தேர்வுக்கான சிறந்த பயிற்சி.", stat1Title: "12 பாதைகள்", stat1Desc: "பல்வேறு பாடங்கள்", stat2Title: "மாதிரி தேர்வு", stat2Desc: "பயிற்சிகள்", stat3Title: "ரேங்க்", stat3Desc: "வளர்ச்சி அறிக்கை", pill1: "தினசரி டெஸ்ட்", pill2: "ரேங்க் கணிப்பு", pill3: "பாடத்திட்டங்கள்", floatingChips: ["AIR 184", "98 %ile இலக்கு", "அடுத்த Mock 07:30"] },
+    scene: { today: "இன்று", streak: "தொடர்", days: "நாட்கள்", revision: "திரும்ப", grade: "A+", score: "மதிப்பெண்", mockClear: "மாதிரி தேர்ச்சி", hi: "வணக்கம்", air: "தரவரிசை" }
   },
   te: {
     nav: { appName: "XQL అకాడమీ", tagline: "నేర్చుకో · స్ట్రీక్ · గెలువు", login: "లాగిన్", signup: "సైన్ అప్" },
     hero: { title1: "ఏదైనా నేర్చుకోండి.", title2: "రోజూ ఎదగండి.", selectLanguage: "నేను నేర్చుకోవాలనుకుంటున్నాను..." },
-    kids: { tag: "పిల్లల కోసం", badge: "ఆటల పురోగతి", title: "ఇంటరాక్టివ్ ప్రపంచం", desc: "పిల్లలు ఇష్టపడేవన్నీ...", artTitle: "కథలు, శబ్దాలు, బహుమతులు.", artDesc: "సురక్షితమైన మరియు రంగుల ప్రపంచం.", stat1Title: "5 నిమిషాలు", stat1Desc: "చిన్న ఆటలు", stat2Title: "రోజూ", stat2Desc: "స్ట్రీక్ బహుమతులు", stat3Title: "మాట్లాడు", stat3Desc: "విను మరియు చెప్పండి" },
+    kids: { tag: "పిల్లల కోసం", badge: "ఆటల పురోగతి", title: "ఇంటరాక్టివ్ ప్రపంచం", desc: "పిల్లలు ఇష్టపడేవన్నీ...", artTitle: "కథలు, శబ్దాలు, బహుమతులు.", artDesc: "సురక్షితమైన మరియు రంగుల ప్రపంచం.", stat1Title: "5 నిమిషాలు", stat1Desc: "చిన్న ఆటలు", stat2Title: "రోజూ", stat2Desc: "స్ట్రీక్ బహుమతులు", stat3Title: "మాట్లాడు", stat3Desc: "విను మరియు చెప్పండి", pill1: "ఆటలు", pill2: "స్ట్రీక్‌లు", pill3: "కథా మోడ్" },
+    kidsTopics: [
+      { icon: "🔤", title: "ABC మరియు పదాలు", desc: "అక్షరమాలలు, ధ్వనిశాస్త్రం మరియు ప్రాథమిక పదజాలం నేర్చుకోండి", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "సంఖ్యలు మరియు గణితం", desc: "వినోదమైన దృశ్య ఆటలతో లెక్కించండి, కూడండి మరియు తీయండి", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "మన చుట్టూ ఉన్న ప్రపంచం", desc: "జంతువులు, ప్రకృతి, గ్రహాలు మరియు ఆశ్చర్యకరమైన విజ్ఞాన వాస్తవాలు", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "కళ మరియు సృజనాత్మకత", desc: "రంగులు, ఆకారాలు, చిత్రలేఖనం మరియు సృజనాత్మక వ్యక్తీకరణ", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "కథా సమయం", desc: "చదవడం మరియు ఊహాశక్తిని పెంచే ఇంటరాక్టివ్ కథలు", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🗣️", title: "మాట్లాడి నేర్చుకోండి", desc: "పదాలను ఉచ్చరించి మాట్లాడడంలో విశ్వాసం పెంచుకోండి", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "పజిల్స్ మరియు లాజిక్", desc: "ఆలోచన మరియు సమస్య పరిష్కారాన్ని పదునుపెట్టే మెదడు పోటీలు", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "పాటలు మరియు గేయాలు", desc: "సంగీతం, లయ మరియు స్మృతి పాటల ద్వారా నేర్చుకోండి", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
     students: { tag: "విద్యార్థుల కోసం", badge: "ఏకాగ్రత", artTitle: "క్రియాశీలమైన అధ్యయన ప్రదేశాలు.", artDesc: "స్మార్ట్ విజువల్స్‌తో అనుభవం.", stat1Title: "12", stat1Desc: "సబ్జెక్టులు", stat2Title: "తొరగా", stat2Desc: "పరీక్షల ముందు పునర్విమర్శ", stat3Title: "లైవ్", stat3Desc: "పురోగతి బార్‌లు", title: "మీ సబ్జెక్టులలో ఏస్ అవ్వండి", desc: "క్లాస్ 1-12 కోసం పాఠాలు.", pill1: "పరీక్ష శిక్షణ", pill2: "పురోగతి", pill3: "వేగవంతమైన మదింపు" },
-    exams: { tag: "పోటీ పరీక్షలు", title: "కష్టమైన పరీక్షలు పగులగొట్టండి", desc: "పోటీ పరీక్షల తయారీ.", stat1Title: "12 మార్గాలు", stat1Desc: "గైడెన్స్", stat2Title: "మాక్ టెస్ట్స్", stat2Desc: "సాధన", stat3Title: "ర్యాంక్", stat3Desc: "ఫీడ్‌బ్యాక్", pill1: "రోజువారీ పరీక్షలు", pill2: "ర్యాంక్ అంచనా", pill3: "సిలబస్ ట్రాకింగ్" }
+    studentsTopics: [
+      { icon: "📐", title: "గణితం", desc: "ఆల్జీబ్రా, జ్యామితి, త్రికోణమితి మరియు కాల్క్యులస్", badge: "క్లాస్ 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "విజ్ఞానం", desc: "భౌతిక శాస్త్రం, రసాయన శాస్త్రం మరియు జీవశాస్త్రం దృశ్యాత్మకంగా", badge: "క్లాస్ 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "ఇంగ్లీష్", desc: "వ్యాకరణం, అర్థం, రచన మరియు సాహిత్యం", badge: "క్లాస్ 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "సామాజిక అధ్యయనం", desc: "చరిత్ర, భూగోళ శాస్త్రం, పౌరత్వం మరియు ఆర్థిక శాస్త్రం", badge: "క్లాస్ 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "కంప్యూటర్ సైన్స్", desc: "ప్రోగ్రామింగ్ ప్రాథమికాలు, MS Office మరియు డిజిటల్ స్కిల్స్", badge: "క్లాస్ 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "ల్యాబ్ ప్రాక్టికల్స్", desc: "దశల వారీగా మార్గదర్శకత్వంతో వర్చువల్ ప్రయోగాలు", badge: "క్లాస్ 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "నిబంధనలు రాయడం", desc: "పరీక్షల కోసం నిర్మాణం, పదజాలం మరియు రాయడం నైపుణ్యాలు", badge: "క్లాస్ 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "భాషలు", desc: "హిందీ, సంస్కృతం, ఫ్రెంచ్ మరియు ప్రాంతీయ భాషలు", badge: "క్లాస్ 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "ప్రీలిమ్స్, మెయిన్స్ మరియు ఇంటర్వ్యూ సిద్ధతతో సమకాలీన అంశాలు", tag: "సివిల్ సర్వీసెస్", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "మహారాష్ట్ర రాష్ట్ర సేవల కోసం పూర్తి సిద్ధత", tag: "స్టేట్ సర్వీసెస్", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "వైద్య ప్రవేశానికి బయాలజీ, ఫిజిక్స్ మరియు కెమిస్ట్రీ", tag: "మెడికల్", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT ప్రవేశానికి గణితం, ఫిజిక్స్ మరియు కెమిస్ట్రీ", tag: "ఇంజనీరింగ్", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS సిద్ధత", desc: "వైద్య విద్యార్థులకు ప్రాథమిక మరియు క్లినీకల్ జ్ఞానం", tag: "మెడికల్", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "ఇంజనీరింగ్", desc: "CSE, ECE, మెకానికల్, సివిల్ వంటి కోర్ ఇంజనీరింగ్ సబ్జెక్టులు", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / చట్టం", desc: "చట్ట తర్కం, GK మరియు ఇంగ్లీష్ కోసం", tag: "చట్టం", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "బిజినెస్ స్కూల్స్ కోసం కొవైంట్, వెర్బల్ మరియు DILR", tag: "మెనేజ్మెంట్", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "బ్యాంకింగ్ / IBPS", desc: "బ్యాంక్ పరీక్షల కోసం రీజనింగ్, గణితం మరియు ఇంగ్లీష్", tag: "బ్యాంకింగ్", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / డిఫెన్స్", desc: "సైనికులకు గణితం, GK మరియు SSB సిద్ధత", tag: "డిఫెన్స్", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "PSU / M.Tech కోసం అడ్వాన్స్డ్ ఇంజనీరింగ్ మరియు సైన్స్", tag: "పోస్ట్గ్రాడ్", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "అకౌంటింగ్, పన్నులు మరియు ఫైనాన్స్ కోర్సులు", tag: "ఫైనాన్స్", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "పోటీ పరీక్షలు", title: "కష్టమైన పరీక్షలు పగులగొట్టండి", desc: "పోటీ పరీక్షల తయారీ.", stat1Title: "12 మార్గాలు", stat1Desc: "గైడెన్స్", stat2Title: "మాక్ టెస్ట్స్", stat2Desc: "సాధన", stat3Title: "ర్యాంక్", stat3Desc: "ఫీడ్‌బ్యాక్", pill1: "రోజువారీ పరీక్షలు", pill2: "ర్యాంక్ అంచనా", pill3: "సిలబస్ ట్రాకింగ్", floatingChips: ["AIR 184", "98 %ile లక్ష్యం", "తదుపరి Mock 07:30"] },
+    scene: { today: "నేడు", streak: "స్ట్రీక్", days: "రోజులు", revision: "పునర్విమర్శ", grade: "A+", score: "స్కోర్", mockClear: "మాక్ పాస్", hi: "హాయ్", air: "ర్యాంక్" }
   },
   bn: {
     nav: { appName: "XQL একাডেমি", tagline: "শিখুন · স্ট্রিক · জিতুন", login: "লগ ইন", signup: "সাইন আপ" },
     hero: { title1: "যেকোনো কিছু শিখুন।", title2: "প্রতিদিন এগিয়ে যান।", selectLanguage: "আমি শিখতে চাই..." },
     kids: { tag: "বাচ্চাদের জন্য", badge: "খেলার ছলে অগ্রগতি", title: "ইন্টারেক্টিভ বিশ্ব", desc: "বাচ্চাদের পছন্দের সবকিছু...", artTitle: "গল্প, শব্দ এবং পুরষ্কার একটি আনন্দময় স্থানে।", artDesc: "নিরাপদ এবং রঙিন স্থান।", stat1Title: "৫ মিনিট", stat1Desc: "ছোট খেলার সেশন", stat2Title: "রোজ", stat2Desc: "পুরষ্কার", stat3Title: "বলুন", stat3Desc: "শুনুন, পুনরাবৃত্তি করুন" },
     students: { tag: "শিক্ষার্থীদের জন্য", badge: "কেন্দ্রিক গতি", artTitle: "সক্রিয় এবং আধুনিক অধ্যয়নের স্থান।", artDesc: "ছাত্রদের স্মার্ট অভিজ্ঞতা।", stat1Title: "১২", stat1Desc: "বিষয় ট্র্যাক", stat2Title: "দ্রুত", stat2Desc: "রিভিশন", stat3Title: "লাইভ", stat3Desc: "অগ্রগতি এবং লক্ষ্য", title: "স্কুলের বিষয়ে শীর্ষে থাকুন", desc: "১-১২ শ্রেণীর পাঠ্যক্রম।", pill1: "পরীক্ষার প্রস্তুতি", pill2: "অগ্রগতি", pill3: "দ্রুত রিভিশন" },
-    exams: { tag: "প্রতিযোগিতামূলক পরীক্ষা", title: "কঠিন পরীক্ষায় উত্তীর্ণ হোন", desc: "কঠিন পরীক্ষার প্রস্তুতি।", stat1Title: "১২ টি পথ", stat1Desc: "বিভিন্ন কোর্স", stat2Title: "মক টেস্ট", stat2Desc: "চাপের মধ্যে অনুশীলন", stat3Title: "র‍্যাঙ্ক", stat3Desc: "সাফল্যের প্রতিক্রিয়া", pill1: "দৈনিক মক", pill2: "র‍্যাঙ্ক পূর্বাভাস", pill3: "সিলেবাস ট্র্যাকার" }
+    kidsTopics: [
+      { icon: "🔤", title: "ABC ও শব্দ", desc: "বর্ণমালা, ধ্বনিতত্ত্ব এবং মৌলিক শব্দভাণ্ডার শিখুন", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "সংখ্যা ও গণিত", desc: "মজার ভিজ্যুয়াল গেম দিয়ে গণনা, যোগ ও বিয়োগ শিখুন", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "আমাদের আশেপাশের বিশ্ব", desc: "প্রাণী, প্রকৃতি, গ্রহ এবং আশ্চর্যজনক বৈজ্ঞানিক তথ্য", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "শিল্প ও সৃজনশীলতা", desc: "রং, আকৃতি, আঁকা এবং সৃজনশীল অভিব্যক্তি", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "গল্পের সময়", desc: "ইন্টারেক্টিভ গল্প যা পড়া এবং কল্পনাশক্তি তৈরি করে", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "কথা বলি ও শিখি", desc: "শব্দ উচ্চারণ করুন ও কথা বলার আত্মবিশ্বাস গড়ে তুলুন", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "ধাঁধা ও যুক্তি", desc: "মস্তিষ্ক সতেজ করার ধাঁধা ও সমস্যা সমাধান অনুশীলন", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "ছড়া ও গান", desc: "সঙ্গীত, ছন্দ ও স্মৃতি গান দিয়ে শিখুন", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    studentsTopics: [
+      { icon: "📐", title: "গণিত", desc: "বীজগণিত, জ্যামিতি, ত্রিকোণমিতি ও ক্যালকুলাস", badge: "ক্লাস 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "বিজ্ঞান", desc: "পদার্থ, রসায়ন ও জীববিজ্ঞান চিত্রময়ভাবে", badge: "ক্লাস 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "ইংরেজি", desc: "ব্যাকরণ, অনুধাবন, লেখনী ও সাহিত্য", badge: "ক্লাস 1-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🗺️", title: "সামাজিক শিক্ষা", desc: "ইতিহাস, ভৌগোলিক, নাগরিকতা ও অর্থনীতি", badge: "ক্লাস 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "কম্পিউটার সাইন্স", desc: "প্রোগ্রামিং মৌলিক, এমএস অফিস ও ডিজিটাল দক্ষতা", badge: "ক্লাস 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "ল্যাব প্র্যাকটিক্যালস", desc: "ধাপে ধাপে গাইড সহ ভার্চুয়াল পরীক্ষা", badge: "ক্লাস 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "নিবন্ধ লেখা", desc: "পরীক্ষার জন্য কাঠামো, শব্দভাণ্ডার ও লেখার দক্ষতা", badge: "ক্লাস 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "ভাষা", desc: "হিন্দি, সংস্কৃত, ফরাসি ও আঞ্চলিক ভাষা", badge: "ক্লাস 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "সাময়িক বিষয় সহ প্রিলিমস, মেইন ও সাক্ষাৎকার প্রস্তুতি", tag: "সিভিল সার্ভিসেস", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "মহারাষ্ট্র রাজ্য সেবার সম্পূর্ণ প্রস্তুতি", tag: "রাজ্য সেবা", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "মেডিক্যাল এন্ট্রান্সের জন্য জীববিজ্ঞান, পদার্থবিজ্ঞান এবং রসায়ন", tag: "মেডিকেল", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT প্রবেশের জন্য গণিত, পদার্থবিজ্ঞান এবং রসায়ন", tag: "ইঞ্জিনিয়ারিং", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏥", title: "MBBS প্রস্তুতি", desc: "চিকিৎসা শিক্ষার্থীদের জন্য মৌলিক ও ক্লিনিক্যাল জ্ঞান", tag: "মেডিকেল", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "ইঞ্জিনিয়ারিং", desc: "মূল ইঞ্জিনিয়ারিং বিষয় - CSE, ECE, মেকানিক্যাল, সিভিল", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / আইন", desc: "আইনি যুক্তি, GK এবং ইংরেজি আইন প্রবেশের জন্য", tag: "আইন", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "ব্যবসা স্কুলের জন্য পরিমাণগত, মৌখিক ও DILR", tag: "ম্যানেজমেন্ট", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🏦", title: "ব্যাংকিং / IBPS", desc: "ব্যাংকিং পরীক্ষার জন্য যুক্তি, গণিত ও ইংরেজি", tag: "ব্যাংকিং", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / ডিফেন্স", desc: "বাহিনী জন্য গণিত, GK ও SSB প্রস্তুতি", tag: "ডিফেন্স", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "PSU / M.Tech-এর জন্য উন্নত ইঞ্জিনিয়ারিং ও বিজ্ঞান", tag: "পোস্টগ্র্যাজুয়েট", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "হিসাবরক্ষণ, কর ও আর্থিক কোর্স", tag: "ফাইন্যান্স", color: "#EFFFE0", border: "#C8F09A" }
+    ],
+    exams: { tag: "প্রতিযোগিতামূলক পরীক্ষা", title: "কঠিন পরীক্ষায় উত্তীর্ণ হোন", desc: "কঠিন পরীক্ষার প্রস্তুতি।", stat1Title: "১২ টি পথ", stat1Desc: "বিভিন্ন কোর্স", stat2Title: "মক টেস্ট", stat2Desc: "চাপের মধ্যে অনুশীলন", stat3Title: "র‍্যাঙ্ক", stat3Desc: "সাফল্যের প্রতিক্রিয়া", pill1: "দৈনিক মক", pill2: "র‍্যাঙ্ক পূর্বাভাস", pill3: "সিলেবাস ট্র্যাকার", floatingChips: ["AIR 184", "98 %ile লক্ষ্য", "পরবর্তী Mock 07:30"] },
+    scene: { today: "আজ", streak: "স্ট্রিক", days: "দিন", revision: "পুনরাবৃত্তি", grade: "A+", score: "স্কোর", mockClear: "মক পাস", hi: "হ্যালো", air: "র‍্যাঙ্ক" }
   },
   id: {
     nav: { appName: "Akademi XQL", tagline: "Belajar · Streak · Menang", login: "MASUK", signup: "DAFTAR" },
     hero: { title1: "Pelajari apa saja.", title2: "Naik level setiap hari.", selectLanguage: "Saya ingin belajar..." },
     kids: { tag: "Untuk Anak", badge: "Kemajuan bermain", title: "Dunia interaktif", desc: "Campuran hal yang disukai anak...", artTitle: "Cerita, suara, dan hadiah di satu tempat.", artDesc: "Aman dan penuh warna.", stat1Title: "5 mnt", stat1Desc: "sesi bermain singkat", stat2Title: "Harian", stat2Desc: "hadiah streak", stat3Title: "Bicara", stat3Desc: "dengar dan ulangi" },
     students: { tag: "Untuk Pelajar", badge: "Fokus maksimum", artTitle: "Ruang belajar modern dan aktif.", artDesc: "Pengalaman belajar siswa yang tajam.", stat1Title: "12", stat1Desc: "pelajaran terpandu", stat2Title: "Cepat", stat2Desc: "sesi revisi", stat3Title: "Live", stat3Desc: "progres dan tujuan", title: "Kuasai pelajaran", desc: "Pelajaran kelas 1-12 yang terstruktur.", pill1: "Latihan Ujian", pill2: "Progres Nyata", pill3: "Revisi Cepat" },
-    exams: { tag: "Ujian Kompetitif", title: "Lulus ujian tersulit", desc: "Persiapan matang ujian kompetitif.", stat1Title: "12 Jalur", stat1Desc: "banyak pilihan", stat2Title: "Tes Simulasi", stat2Desc: "latihan langsung", stat3Title: "Peringkat", stat3Desc: "umpan balik cepat", pill1: "Tes Harian", pill2: "Prediksi Peringkat", pill3: "Pelacak Silabus" }
+    kidsTopics: [
+      { icon: "🔤", title: "ABC dan Kata", desc: "Pelajari alfabet, fonetik, dan kosakata dasar", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Angka dan Matematika", desc: "Hitung, tambahkan, dan kurangi dengan game visual yang seru", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "Dunia di Sekitar Kita", desc: "Hewan, alam, planet, dan fakta sains menakjubkan", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Seni dan Kreativitas", desc: "Warna, bentuk, menggambar, dan ekspresi kreatif", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Waktu Cerita", desc: "Cerita interaktif yang membangun membaca dan imajinasi", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Bicara dan Belajar", desc: "Ucapkan kata dan bangun percaya diri berbicara", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Teka-teki dan Logika", desc: "Latihan otak yang mempertajam berpikir dan pemecahan masalah", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Rima dan Lagu", desc: "Belajar melalui musik, ritme, dan lagu ingatan", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    studentsTopics: [
+      { icon: "📐", title: "Matematika", desc: "Aljabar, geometri, trigonometri, dan kalkulus", badge: "Kelas 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Sains", desc: "Fisika, kimia, dan biologi divisualisasikan", badge: "Kelas 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Bahasa Inggris", desc: "Tata bahasa, pemahaman, tulisan, dan sastra", badge: "Kelas 1-12", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🗺️", title: "Ilmu Sosial", desc: "Sejarah, geografi, kewarganegaraan, dan ekonomi", badge: "Kelas 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "TIK", desc: "Dasar pemrograman, MS Office, dan keterampilan digital", badge: "Kelas 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Praktikum", desc: "Eksperimen virtual dengan panduan langkah demi langkah", badge: "Kelas 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Menulis Esai", desc: "Struktur, kosakata, dan keterampilan menulis untuk ujian", badge: "Kelas 8-12", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🌐", title: "Bahasa", desc: "Hindi, Sanskerta, Prancis, dan bahasa daerah", badge: "Kelas 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Persiapan Prelims, Mains, dan wawancara dengan isu terkini", tag: "Layanan Sipil", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Persiapan lengkap untuk layanan negara Maharashtra", tag: "Layanan Negara", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biologi, Fisika, dan Kimia untuk masuk kedokteran", tag: "Medis", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Matematika, Fisika, dan Kimia untuk masuk IIT/NIT", tag: "Teknik", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🏥", title: "Persiapan MBBS", desc: "Pengetahuan dasar dan klinis untuk mahasiswa kedokteran", tag: "Medis", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Teknik", desc: "Mata pelajaran inti teknik - CSE, ECE, Mekanik, Sipil", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Hukum", desc: "Penalaran hukum, GK, dan Inggris untuk masuk hukum", tag: "Hukum", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Kuantitatif, verbal, dan DILR untuk sekolah bisnis top", tag: "Manajemen", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🏦", title: "Banking / IBPS", desc: "Penalaran, matematika, dan bahasa Inggris untuk ujian perbankan", tag: "Perbankan", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Pertahanan", desc: "Matematika, GK, dan persiapan SSB untuk angkatan bersenjata", tag: "Pertahanan", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Teknik lanjutan dan ilmu untuk PSU / M.Tech", tag: "Pascasarjana", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Akuntansi, perpajakan, dan kursus profesional keuangan", tag: "Keuangan", color: "#EFFFE0", border: "#C9EBFF" }
+    ],
+    exams: { tag: "Ujian Kompetitif", title: "Lulus ujian tersulit", desc: "Persiapan matang ujian kompetitif.", stat1Title: "12 Jalur", stat1Desc: "banyak pilihan", stat2Title: "Tes Simulasi", stat2Desc: "latihan langsung", stat3Title: "Peringkat", stat3Desc: "umpan balik cepat", pill1: "Tes Harian", pill2: "Prediksi Peringkat", pill3: "Pelacak Silabus" },
+    scene: { today: "HARI INI", streak: "STREAK", days: "Hari", revision: "ULANG", grade: "A+", score: "SKOR", mockClear: "Simulasi Lulus", hi: "Halo", air: "PERINGKAT" }
   },
   tr: {
     nav: { appName: "XQL Akademi", tagline: "Öğren · Seri · Kazan", login: "GİRİŞ", signup: "KAYIT OL" },
     hero: { title1: "Her şeyi öğren.", title2: "Her gün seviye atla.", selectLanguage: "Öğrenmek istiyorum..." },
     kids: { tag: "Çocuklar İçin", badge: "Eğlenceli İlerleme", title: "İnteraktif dünya", desc: "Çocukların sevdiği her şey...", artTitle: "Mutlu bir yerde hikayeler ve ödüller.", artDesc: "Güvenli ve renkli bir alan.", stat1Title: "5 dk", stat1Desc: "kısa oyun", stat2Title: "Günlük", stat2Desc: "seri ve yıldız", stat3Title: "Konuş", stat3Desc: "dinle ve tekrarla" },
     students: { tag: "Öğrenciler İçin", badge: "Odaklanma", artTitle: "Modern çalışma alanları.", artDesc: "Kapsamlı bir öğrenci deneyimi.", stat1Title: "12", stat1Desc: "yönlendirmeli konu", stat2Title: "Hızlı", stat2Desc: "tekrar döngüsü", stat3Title: "Canlı", stat3Desc: "ilerleme çubuğu", title: "Dersleri Başar", desc: "1-12. sınıflar için yapılandırılmış dersler.", pill1: "Sınav Egzersizi", pill2: "Canlı İlerleme", pill3: "Hızlı Tekrar" },
-    exams: { tag: "Rekabetçi Sınavlar", title: "Zorlu sınavları kazan", desc: "Önemli sınavlara hazırlık.", stat1Title: "12 Yön", stat1Desc: "çeşitli alanlar", stat2Title: "Denemeler", stat2Desc: "baskı altında pratik", stat3Title: "Sıralama", stat3Desc: "hızlı geri bildirim", pill1: "Günlük Deneme", pill2: "Derece Tahmini", pill3: "Müfredat Takibi" }
+    kidsTopics: [
+      { icon: "🔤", title: "ABC ve Kelimeler", desc: "Alfabe, fonetik ve temel kelime bilgisini öğrenin", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Sayılar ve Matematik", desc: "Eğlenceli görsel oyunlarla sayın, toplayın ve çıkarın", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "Etrafımızdaki Dünya", desc: "Hayvanlar, doğa, gezegenler ve inanılmaz bilimsel gerçekler", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Sanat ve Yaratıcılık", desc: "Renkler, şekiller, çizim ve yaratıcı ifade", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Hikaye Zamanı", desc: "Okumayı ve hayal gücünü geliştiren etkileşimli hikayeler", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Konuş ve Öğren", desc: "Kelimeleri telaffuz edin ve konuşma güveninizi geliştirin", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Bulmacalar ve Mantık", desc: "Düşünmeyi ve problem çözmeyi keskinleştiren zihin oyunları", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Kafiye ve Şarkılar", desc: "Müzik, ritim ve ezber şarkılarıyla öğrenin", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    studentsTopics: [
+      { icon: "📐", title: "Matematik", desc: "Cebir, geometri, trigonometri ve kalkülüs", badge: "Sınıf 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Fen", desc: "Fizik, kimya ve biyolojiyi görselleştirilmiş şekilde öğrenin", badge: "Sınıf 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "İngilizce", desc: "Dilbilgisi, okuma, yazma ve edebiyat", badge: "Sınıf 1-12", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🗺️", title: "Sosyal Bilgiler", desc: "Tarih, coğrafya, yurttaşlık ve ekonomi", badge: "Sınıf 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Bilgisayar Bilimi", desc: "Programlama temelleri, MS Office ve dijital beceriler", badge: "Sınıf 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Laboratuvar Uygulamaları", desc: "Adım adım rehberli sanal deneyler", badge: "Sınıf 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Kompozisyon Yazımı", desc: "Sınavlar için yapı, kelime dağarcığı ve yazma becerileri", badge: "Sınıf 8-12", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🌐", title: "Diller", desc: "Hintçe, Sanskritçe, Fransızca ve bölgesel diller", badge: "Sınıf 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Güncel konularla Prelims, Mains ve mülakat hazırlığı", tag: "Kamu Hizmetleri", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Maharashtra devlet hizmetleri için eksiksiz hazırlık", tag: "Devlet Hizmetleri", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Tıp giriş için biyoloji, fizik ve kimya", tag: "Tıp", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "IIT/NIT giriş için matematik, fizik ve kimya", tag: "Mühendislik", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🏥", title: "MBBS Hazırlığı", desc: "Tıp öğrencileri için temel ve klinik bilgi", tag: "Tıp", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Mühendislik", desc: "CSE, ECE, Mekanik, İnşaat gibi temel mühendislik dersleri", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Hukuk", desc: "Hukuki akıl yürütme, GK ve İngilizce için", tag: "Hukuk", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Üst düzey işletme okulları için nicel, sözel ve DILR", tag: "Yönetim", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🏦", title: "Banking / IBPS", desc: "Banka sınavları için mantık, matematik ve İngilizce", tag: "Bankacılık", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Savunma", desc: "Silahlı kuvvetler için matematik, GK ve SSB hazırlığı", tag: "Savunma", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Gelişmiş mühendislik ve bilim için PSU / M.Tech", tag: "Lisansüstü", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Muhasebe, vergilendirme ve finansal mesleki kurslar", tag: "Finans", color: "#EFFFE0", border: "#C9EBFF" }
+    ],
+    exams: { tag: "Rekabetçi Sınavlar", title: "Zorlu sınavları kazan", desc: "Önemli sınavlara hazırlık.", stat1Title: "12 Yön", stat1Desc: "çeşitli alanlar", stat2Title: "Denemeler", stat2Desc: "baskı altında pratik", stat3Title: "Sıralama", stat3Desc: "hızlı geri bildirim", pill1: "Günlük Deneme", pill2: "Derece Tahmini", pill3: "Müfredat Takibi" },
+    scene: { today: "BUGÜN", streak: "SERİ", days: "Gün", revision: "TÖK", grade: "A+", score: "PUAN", mockClear: "Deneme Geçti", hi: "Merhaba", air: "SIRA" }
   },
   nl: {
     nav: { appName: "XQL Academie", tagline: "Leer · Reeks · Win", login: "INLOGGEN", signup: "REGISTREREN" },
     hero: { title1: "Leer van alles.", title2: "Stijg dagelijks in niveau.", selectLanguage: "Ik wil leren..." },
     kids: { tag: "Voor Kinderen", badge: "Speelse vooruitgang", title: "Interactieve wereld", desc: "Dingen die kinderen graag ontdekken...", artTitle: "Verhalen, geluiden en beloningen.", artDesc: "Een veilige en kleurrijke weergave.", stat1Title: "5 min", stat1Desc: "korte speelsessies", stat2Title: "Dagelijks", stat2Desc: "reeks en sterren", stat3Title: "Spreek", stat3Desc: "luister en herhaal" },
     students: { tag: "Voor Studenten", badge: "Grote focus", artTitle: "Actieve en moderne leerruimtes.", artDesc: "Slimme visuals en feedback.", stat1Title: "12", stat1Desc: "geleide vakken", stat2Title: "Snel", stat2Desc: "herhalingssessies", stat3Title: "Live", stat3Desc: "voortgangsbalken", title: "Beheers je schoolvakken", desc: "Structuurlessen voor de hele rit.", pill1: "Examentoetsen", pill2: "Live Voortgang", pill3: "Snelle Herhaling" },
-    exams: { tag: "Competitieve Examens", title: "Kraak zware examens", desc: "Examentraining met tests en doelen.", stat1Title: "12 Paden", stat1Desc: "veel cursussen", stat2Title: "Proefexamens", stat2Desc: "oefenen onder druk", stat3Title: "Ranglijst", stat3Desc: "duidelijke feedback", pill1: "Dagelijkse Tests", pill2: "Rangschikking", pill3: "Syllabus Tracker" }
+    kidsTopics: [
+      { icon: "🔤", title: "ABC en Woorden", desc: "Leer alfabet, fonetiek en basiswoordenschat", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Getallen en Wiskunde", desc: "Tel, tel op en trek af met leuke visuele spellen", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "De Wereld om Ons Heen", desc: "Dieren, natuur, planeten en verbazingwekkende wetenschappelijke feiten", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Kunst en Creativiteit", desc: "Kleuren, vormen, tekenen en creatieve expressie", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Verhaaltjestijd", desc: "Interactieve verhalen die lezen en verbeelding opbouwen", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Spreek en Leer", desc: "Spreek woorden uit en bouw vertrouwen op", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Puzzels en Logica", desc: "Breinbrekers die denken en probleemoplossing aanscherpen", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Rijmpjes en Liedjes", desc: "Leer via muziek, ritme en geheugenliedjes", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    studentsTopics: [
+      { icon: "📐", title: "Wiskunde", desc: "Algebra, geometrie, goniometrie en calculus", badge: "Klas 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Natuurkunde", desc: "Natuurkunde, scheikunde en biologie visueel gemaakt", badge: "Klas 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Engels", desc: "Grammatica, begrip, schrijven en literatuur", badge: "Klas 1-12", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🗺️", title: "Sociale Studies", desc: "Geschiedenis, aardrijkskunde, burgerschap en economie", badge: "Klas 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Informatica", desc: "Basis programmeren, MS Office en digitale vaardigheden", badge: "Klas 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Lab Practica", desc: "Virtuele experimenten met stapsgewijze begeleiding", badge: "Klas 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Essay Schrijven", desc: "Structuur, woordenschat en schrijfvaardigheden voor exams", badge: "Klas 8-12", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🌐", title: "Talen", desc: "Hindi, Sanskriet, Frans en regionale talen", badge: "Klas 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Voorbereiding voor Prelims, Mains en interview met actualiteiten", tag: "Openbare Diensten", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Volledige voorbereiding voor Maharashtra Staatstaken", tag: "Staatsdiensten", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biologie, natuurkunde en scheikunde voor medische toelating", tag: "Medisch", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Wiskunde, natuurkunde en scheikunde voor IIT/NIT", tag: "Techniek", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🏥", title: "MBBS Voorbereiding", desc: "Basis en klinische kennis voor geneeskundestudenten", tag: "Medisch", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Techniek", desc: "Kerntechnische vakken - CSE, ECE, Mechanica, Civiel", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Recht", desc: "Juridisch redeneren, GK en Engels voor rechtenstudie", tag: "Recht", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Kwantitatief, verbaal en DILR voor top business schools", tag: "Management", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🏦", title: "Banking / IBPS", desc: "Redeneren, wiskunde en Engels voor bankexamens", tag: "Bankieren", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Defensie", desc: "Wiskunde, GK en SSB voorbereiding voor strijdkrachten", tag: "Defensie", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Geavanceerde techniek en wetenschap voor PSU / M.Tech", tag: "Postgraduaat", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Boekhouding, belasting en financiële beroepscursussen", tag: "Financiën", color: "#EFFFE0", border: "#C9EBFF" }
+    ],
+    exams: { tag: "Competitieve Examens", title: "Kraak zware examens", desc: "Examentraining met tests en doelen.", stat1Title: "12 Paden", stat1Desc: "veel cursussen", stat2Title: "Proefexamens", stat2Desc: "oefenen onder druk", stat3Title: "Ranglijst", stat3Desc: "duidelijke feedback", pill1: "Dagelijkse Tests", pill2: "Rangschikking", pill3: "Syllabus Tracker" },
+    scene: { today: "VANDAAG", streak: "REEKS", days: "Dagen", revision: "HER", grade: "A+", score: "SCORE", mockClear: "Proef OK", hi: "Hoi", air: "RANG" }
   },
   pl: {
     nav: { appName: "Akademia XQL", tagline: "Ucz się · Seria · Wygrywaj", login: "ZALOGUJ", signup: "REJESTRACJA" },
     hero: { title1: "Ucz się wszystkiego.", title2: "Poziom wyżej każdego dnia.", selectLanguage: "Chcę się uczyć..." },
     kids: { tag: "Dla Dzieci", badge: "Wesoły Postęp", title: "Interaktywny Świat", desc: "Zbiór wszystkiego, co dzieci kochają...", artTitle: "Historie, dźwięki i nagrody.", artDesc: "Bezpieczne i kolorowe miejsce.", stat1Title: "5 min", stat1Desc: "krótkie sesje gry", stat2Title: "Codziennie", stat2Desc: "serie i gwiazdy", stat3Title: "Mów", stat3Desc: "słuchaj i powtarzaj" },
     students: { tag: "Dla Uczniów", badge: "Skoncentrowany Impuls", artTitle: "Aktywne i nowoczesne miejsca nauki.", artDesc: "Ostre wrażenia dla studentów z wizualizacjami.", stat1Title: "12", stat1Desc: "przedmiotów do nauki", stat2Title: "Szybko", stat2Desc: "pętle powtórek", stat3Title: "Na żywo", stat3Desc: "paski postępu", title: "Opanuj przedmioty szkolne", desc: "Uporządkowane lekcje dla klas 1-12.", pill1: "Ćwiczenia do Egzaminu", pill2: "Animowany Postęp", pill3: "Szybka Powtórka" },
-    exams: { tag: "Trudne Egzaminy", title: "Zdaj najtrudniejsze egzaminy", desc: "Skoncentrowane przygotowanie do rywalizacji.", stat1Title: "12 Ścieżek", stat1Desc: "wiele dróg do sukcesu", stat2Title: "Próbne testy", stat2Desc: "praktyka pod presją", stat3Title: "Ranking", stat3Desc: "jasna ocena wydajności", pill1: "Codzienne testy", pill2: "Prognoza Oceny", pill3: "Śledzenie Programu" }
+    kidsTopics: [
+      { icon: "🔤", title: "ABC i Słowa", desc: "Naucz się alfabetu, fonetyki i podstawowego słownictwa", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔢", title: "Liczby i Matematyka", desc: "Liczenie, dodawanie i odejmowanie z zabawnymi grami wizualnymi", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🌍", title: "Świat wokół nas", desc: "Zwierzęta, przyroda, planety i niesamowite fakty naukowe", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎨", title: "Sztuka i Kreatywność", desc: "Kolory, kształty, rysunek i kreatywna ekspresja", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "📖", title: "Czas na Opowieść", desc: "Interaktywne historie rozwijające czytanie i wyobraźnię", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🗣️", title: "Mów i Ucz się", desc: "Wymów słowa i buduj pewność siebie w mówieniu", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "🧩", title: "Puzzle i Logika", desc: "Główkowanie, które wyostrza myślenie i rozwiązywanie problemów", color: "#EFFFE0", border: "#C8F09A" },
+      { icon: "🎵", title: "Rymy i Piosenki", desc: "Ucz się przez muzykę, rytm i piosenki pamięciowe", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    studentsTopics: [
+      { icon: "📐", title: "Matematyka", desc: "Algebra, geometria, trygonometria i analiza", badge: "Klasa 6-12", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "🔬", title: "Nauki", desc: "Fizyka, chemia i biologia przedstawione wizualnie", badge: "Klasa 6-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📚", title: "Angielski", desc: "Gramatyka, zrozumienie, pisanie i literatura", badge: "Klasa 1-12", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🗺️", title: "Nauki Społeczne", desc: "Historia, geografia, obywatelstwo i ekonomia", badge: "Klasa 6-10", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "💻", title: "Informatyka", desc: "Podstawy programowania, MS Office i umiejętności cyfrowe", badge: "Klasa 6-12", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧪", title: "Praktyka laboratoryjna", desc: "Wirtualne eksperymenty z przewodnikiem krok po kroku", badge: "Klasa 9-12", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📝", title: "Pisanie Esejów", desc: "Struktura, słownictwo i umiejętności pisemne do egzaminów", badge: "Klasa 8-12", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🌐", title: "Języki", desc: "Hindi, sanskryt, francuski i języki regionalne", badge: "Klasa 1-12", color: "#FFF1F7", border: "#FFD0E2" }
+    ],
+    examTracks: [
+      { icon: "🏛️", title: "UPSC / IAS", desc: "Przygotowanie do Prelims, Mains i rozmowy kwalifikacyjnej z aktualnymi tematami", tag: "Służby Cywilne", color: "#FFF8E0", border: "#FFE498" },
+      { icon: "📜", title: "MPSC", desc: "Kompletne przygotowanie do państwowych służb Maharashtra", tag: "Służby Stanowe", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💊", title: "NEET", desc: "Biologia, fizyka i chemia do wejścia na medycynę", tag: "Medyczne", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "⚙️", title: "JEE", desc: "Matematyka, fizyka i chemia do wejścia IIT/NIT", tag: "Inżynieria", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🏥", title: "Przygotowanie MBBS", desc: "Podstawowa i kliniczna wiedza dla studentów medycyny", tag: "Medyczne", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🔧", title: "Inżynieria", desc: "Podstawowe przedmioty inżynieryjne - CSE, ECE, Mechanika, Budownictwo", tag: "B.Tech / B.E.", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "⚖️", title: "CLAT / Prawo", desc: "Myślenie prawne, GK i angielski do wejścia na prawo", tag: "Prawo", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "💼", title: "CAT / MBA", desc: "Ilościowe, werbalne i DILR dla najlepszych szkół biznesowych", tag: "Zarządzanie", color: "#EFFFE0", border: "#C9EBFF" },
+      { icon: "🏦", title: "Banking / IBPS", desc: "Logika, matematyka i angielski do egzaminów bankowych", tag: "Bankowość", color: "#FFF1F7", border: "#FFD0E2" },
+      { icon: "🛡️", title: "NDA / Obrona", desc: "Matematyka, GK i przygotowanie SSB dla sił zbrojnych", tag: "Obrona", color: "#F0F8FF", border: "#B8DAFF" },
+      { icon: "🧬", title: "GATE", desc: "Zaawansowana inżynieria i nauka dla PSU / M.Tech", tag: "Studia podyplomowe", color: "#E8F7FF", border: "#C9EBFF" },
+      { icon: "📊", title: "CA / CMA", desc: "Księgowość, podatki i kursy finansowe", tag: "Finanse", color: "#EFFFE0", border: "#C9EBFF" }
+    ],
+    exams: { tag: "Trudne Egzaminy", title: "Zdaj najtrudniejsze egzaminy", desc: "Skoncentrowane przygotowanie do rywalizacji.", stat1Title: "12 Ścieżek", stat1Desc: "wiele dróg do sukcesu", stat2Title: "Próbne testy", stat2Desc: "praktyka pod presją", stat3Title: "Ranking", stat3Desc: "jasna ocena wydajności", pill1: "Codzienne testy", pill2: "Prognoza Oceny", pill3: "Śledzenie Programu" },
+    scene: { today: "DZIŚ", streak: "SERIA", days: "Dni", revision: "POW", grade: "A+", score: "WYNIK", mockClear: "Test Zaliczony", hi: "Cześć", air: "RANGA" }
   }
 };
 
