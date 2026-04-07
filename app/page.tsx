@@ -12,11 +12,13 @@ import LanguageModal from "@/components/LanguageModal";
 
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language, isReady } = useLanguage();
+
+  // Wait until localStorage is read before deciding what to show
+  if (!isReady) return null;
 
   return (
     <div className="page-shell page-shell-home" style={{ minHeight: "100vh" }}>
-      <LanguageModal />
       <NavBar />
 
       <div className="landing-hero">
@@ -39,7 +41,7 @@ export default function Home() {
         </div>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <HeroScene />
+          {language ? <HeroScene /> : <LanguageModal />}
         </div>
       </div>
 

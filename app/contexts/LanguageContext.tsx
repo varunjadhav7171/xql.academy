@@ -1,49 +1,75 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { dictionaries } from "../locales/dictionaries";
-import { Language } from "../locales/config";
+import type { Language } from "../locales/config";
+import enDict from "../locales/langs/en";
+
+type Dict = typeof enDict;
 
 type LanguageContextType = {
   language: Language | null;
   setLanguage: (lang: Language) => void;
-  t: typeof dictionaries.en;
+  t: Dict;
   isReady: boolean;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const langLoaders: Record<string, () => Promise<{ default: any }>> = {
+  en: () => import("../locales/langs/en"),
+  es: () => import("../locales/langs/es"),
+  fr: () => import("../locales/langs/fr"),
+  de: () => import("../locales/langs/de"),
+  ja: () => import("../locales/langs/ja"),
+  ko: () => import("../locales/langs/ko"),
+  hi: () => import("../locales/langs/hi"),
+  zh: () => import("../locales/langs/zh"),
+  it: () => import("../locales/langs/it"),
+  pt: () => import("../locales/langs/pt"),
+  ru: () => import("../locales/langs/ru"),
+  ar: () => import("../locales/langs/ar"),
+  mr: () => import("../locales/langs/mr"),
+  ta: () => import("../locales/langs/ta"),
+  te: () => import("../locales/langs/te"),
+  bn: () => import("../locales/langs/bn"),
+  id: () => import("../locales/langs/id"),
+  tr: () => import("../locales/langs/tr"),
+  nl: () => import("../locales/langs/nl"),
+  pl: () => import("../locales/langs/pl"),
+};
+
+const mergeDeep = (base: any, override: any): any => {
+  if (Array.isArray(base) || Array.isArray(override)) {
+    return override !== undefined ? override : base;
+  }
+  if (base && typeof base === "object" && override && typeof override === "object") {
+    return Object.keys({ ...base, ...override }).reduce((result, key) => {
+      result[key] = mergeDeep(base[key], override[key]);
+      return result;
+    }, {} as any);
+  }
+  return override !== undefined ? override : base;
+};
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language | null>(null);
   const [isReady, setIsReady] = useState(false);
+  const [t, setT] = useState<Dict>(enDict);
 
   useEffect(() => {
-    const savedLang = window.localStorage.getItem("preferred_lang_v2") as Language | null;
-    if (savedLang && Object.keys(dictionaries).includes(savedLang)) {
-      setLanguageState(savedLang);
-    }
+    // Always start with no language so picker shows on every page open
+    setLanguageState(null);
     setIsReady(true);
   }, []);
 
   const setLanguage = (lang: Language) => {
-    localStorage.setItem("preferred_lang_v2", lang);
     setLanguageState(lang);
-  };
-
-  const mergeDeep = (base: any, override: any) => {
-    if (Array.isArray(base) || Array.isArray(override)) {
-      return override !== undefined ? override : base;
+    if (langLoaders[lang]) {
+      langLoaders[lang]().then((mod) => {
+        setT(mergeDeep(enDict, mod.default));
+      });
     }
-    if (base && typeof base === "object" && override && typeof override === "object") {
-      return Object.keys({ ...base, ...override }).reduce((result, key) => {
-        result[key] = mergeDeep(base[key], override[key]);
-        return result;
-      }, {} as any);
-    }
-    return override !== undefined ? override : base;
   };
-
-  const t = language ? mergeDeep(dictionaries.en, dictionaries[language]) : dictionaries.en;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t, isReady }}>
